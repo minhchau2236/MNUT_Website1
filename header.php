@@ -67,7 +67,7 @@
 				<div class="container">
 					<div class="navbar-header">
 						<div class="navbar-brand"><a href="index.html">
-							<img src="resources/images/logo.png" alt="" /></a></div>
+							<img src="<?php bloginfo('template_url') ?>/resources/images/logo.png" alt="" /></a></div>
 						
 						<button type="button" class="search-btn-mobile" data-toggle="collapse" data-target=".search-collapse"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
 						
@@ -81,16 +81,16 @@
 					</div>
 					<div class="navbar-collapse collapse">
 						<?php 
-							//if (has_nav_menu('ConsultToSee_Walker_Nav_Menu')) {
+							if (has_nav_menu('primary')) {
                                         wp_nav_menu(array(
-                                            'theme_location' => 'primary-menu',
+                                            'theme_location' => 'primary',
                                             'container' => false,
                                             'fallback_cb' => false,
                                             'items_wrap' => '<ul class="nav navbar-nav">%3$s</ul>',
                                             'walker' => new ConsultToSee_Walker_Nav_Menu()
                                                 )
                                         );
-                                    //}						
+                        	}						
 						?>
 						<!-- /.navbar-nav -->
 						<div id="search">
