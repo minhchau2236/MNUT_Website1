@@ -14,7 +14,7 @@
  *
  * @see Walker
  */
-class ConsultToSee_Walker_Nav_Menu extends Walker {
+class ConsultToSee_Walker_Nav_Menu extends  Walker {
 	/**
 	 * What the class handles.
 	 *
@@ -58,7 +58,7 @@ class ConsultToSee_Walker_Nav_Menu extends Walker {
 			$n = "\n";
 		}
 		$indent = str_repeat( $t, $depth );
-		$output .= "{$n}{$indent}<ul class=\"sub-menu\">{$n}";
+		$output .= "{$n}{$indent}<ul class=\"dropdown-menu\">{$n}";
 	}
 
 	/**
@@ -248,3 +248,4 @@ class ConsultToSee_Walker_Nav_Menu extends Walker {
 	}
 
 } // Walker_Nav_Menu
+?>
