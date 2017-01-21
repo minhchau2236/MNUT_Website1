@@ -8,6 +8,7 @@ if(!function_exists('consultToSee_setup')) {
     {
         add_theme_support('title_tag');
 		add_theme_support('menus');
+        add_theme_support( 'post-thumbnails' ); 
 		register_consultToSee_menus();
     }
 }
@@ -44,9 +45,17 @@ function consultToSee_widget_init()
         'before-title' => '<h2 class="widget-title">',
         'after-title' => '</h2>'
     ));
+
+    register_sidebar(array (
+        'name' => __('Lasted News', 'consultToSee2'),
+        'id' => 'lasted-news',
+        'description' => __('Widget add here will apear in lasted news area'),
+        'before-widget' => '<section id="%1$s" class="widget %2$s">',
+        'after-widget' => '</section>',
+        'before-title' => '<h2 class="widget-title">',
+        'after-title' => '</h2>'
+    ));
 }
 
 add_action('widgets_init','consultToSee_widget_init');
-
-
 ?>
