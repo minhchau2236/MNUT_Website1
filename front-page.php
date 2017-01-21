@@ -3,7 +3,6 @@
     get_header();
 ?>
 <div class="content-wrapper width-common"> 
-			
 			<div class="rev_slider_wrapper">
 				<div id="slider1" class="rev_slider" data-version="5.0">
 					<ul>
@@ -471,46 +470,33 @@
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
-					<div class="row">
-						<div class="post col-sm-4">
-							<figure>
-								<a href="#">							   
-									<img src="<?php bloginfo('template_url') ?>/resources/images/post-1.png" alt="" /> </a>
-							</figure>
-							<div class="post-content">
-								<h3 class="post-title">
-									<a href="#">Joining Melissa with the Consulting Seminar in Kuala Lumpur this January</a></h3>
-								<p class="post-decription">A revealing and emotional experinces for me with the workshop in Malaysia</p>
+					<div class="row">	
+						<?php
+							get_sidebar('lasted-news');
+						?>
+
+
+						<?php $my_query = new WP_Query( 'category_name=travel-news&posts_per_page=3' ); ?>
+						<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+							<!-- Do special_cat stuff... -->
+							<div class="post col-sm-4">
+								<figure>
+									<a href="#">
+									<?php	
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail();
+									} 		
+									?>				   									
+									</a>
+								</figure>
+								<div class="post-content">
+									<h3 class="post-title">
+										<a href="#"><?php the_title(); ?></a></h3>
+									<p class="post-decription"><?php the_content(); ?></p>
+								</div>
+								<!-- /.post-content --> 
 							</div>
-							<!-- /.post-content --> 
-						</div>
-						<!-- /.post -->
-						
-						<div class="post col-sm-4">
-							<figure>
-								<a href="#">							   
-									<img src="<?php bloginfo('template_url') ?>/resources/images/post-2.png" alt="" /> </a>
-							</figure>
-							<div class="post-content">
-								<h3 class="post-title">
-									<a href="#">Impression from the last promotional workshop with ConsulToSee</a></h3>
-								<p class="post-decription">Thanks you for joining us. Now let take a look back at the moments of our last workshop.</p>
-							</div>
-							<!-- /.post-content --> 
-						</div>
-						<!-- /.post -->
-						
-						<div class="post col-sm-4">
-							<figure>
-								<a href="#">							   
-									<img src="<?php bloginfo('template_url') ?>/resources/images/post-3.png" alt="" /> </a>
-							</figure>
-							<div class="post-content">
-								<h3 class="post-title"><a href="#">Following your hearts, that’s what it means to be adult</a></h3>
-								<p class="post-decription">To be adult does not meant to do what you are supposed to do, said Wilfred Nelles.</p>
-							</div>
-							<!-- /.post-content --> 
-						</div>
+						<?php endwhile; ?>		
 						<!-- /.post -->
 						
 					</div>
