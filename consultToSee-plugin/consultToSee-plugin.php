@@ -36,14 +36,14 @@ public function widget( $args, $instance ) {
 								'<figure>';
 									if ( has_post_thumbnail() ) {
 
-									echo '<a href="#">'.
+									echo '<a href="'; echo the_permalink(); echo '">'.
 										'<img src="'; echo the_post_thumbnail_url(); echo '" alt="" />';									
 									} 					   									
 								echo '</a>'.
 								'</figure>'.
 								'<div class="post-content">'.
 									'<h3 class="post-title">'.
-										'<a href="#">'; echo the_title(); echo '</a></h3>'.
+										'<a href="'; echo the_permalink(); echo '">'; echo the_title(); echo '</a></h3>'.
 									'<p class="post-decription">'; echo the_content(); echo '</p>'.
 								'</div>'.
 								'<!-- /.post-content --> '.
