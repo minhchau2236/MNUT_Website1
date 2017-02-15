@@ -17,9 +17,11 @@ get_header(); ?>
 				</div>
 				
 				<div class="row article-body">
-					<figure> <img class="img-responsive" src="  <?php the_post_thumbnail_url();  ?>" alt=""> </figure>
+				<div class="col-md-8">
+					<figure> <img class="img-responsive" src="<?php the_post_thumbnail_url();  ?>" alt=""> </figure>
 					 <?php  the_content();  ?>
-					</div>
+			     </div>
+
 					<!-- /column left -->
 					<div class="col-md-4">
 						<div class="header-style-2">Related news</div>

@@ -465,9 +465,9 @@
 			
 			<div class="width-common">
 				<div class="container inner">
-					<div class="section-title">
+					<!--<div class="section-title">
 						<h3>recent news</h3>								
-					</div>
+					</div>-->
 					<!-- /.section-title -->
 					<div class="divide20"></div>
 					<div class="row">	
