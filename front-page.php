@@ -97,7 +97,7 @@
 								data-end="9000" 
 								style="z-index: 10; white-space: nowrap; font-size: 30px; line-height: 30px;">
 								<span class="leanMore">Lean more about</span>
-								<a href="#" class="btn btn-transparent btn-large">Our workshop</a></div>
+								<a href="<?php echo get_page_link(252) ?>" class="btn btn-transparent btn-large">Our workshop</a></div>
 						</li>					
 						
 						<li data-transition="fade"> <img src="<?php bloginfo('template_url') ?>/resources/images/bg_slider.jpg" alt="" />
@@ -206,7 +206,7 @@
 					<div class="row">					
 						<div class="col-md-7 col-sm-12 col-xs-12">							
 							<div class="section-title">
-								<h3>Systemic Constellation</h3>								
+								<a href="<?php echo get_page_link(250) ?>"><h3>Systemic Constellation</h3></a>								
 							</div>
 							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
 								<div class="col-sm-12">
@@ -214,7 +214,7 @@
 										Systemic Constellation enables you to get into your own power and to take control by yourself! <br/>
 										The method enables you To See your roots as an eternal powerbank, rather than an excuse for shortcomings! To See difficulties as the rocks on your path, which strengthen you by removing them.									
 									</div>
-									<a href="#" class="btn-more pull-right">More about our Method</a>
+									<a href="<?php echo get_page_link(250) ?>" class="btn-more pull-right">More about our Method</a>
 								</div>																	
 							</div>
 							<!--/.row -->
@@ -249,7 +249,7 @@
 						<!--/column -->
 						<div class="col-md-8 col-sm-12 col-xs-12">							
 							<div class="section-title">
-								<h3>management consulting</h3>								
+								<a href="<?php echo get_page_link(243); ?>"><h3>management consulting</h3></a>								
 							</div>
 							<!-- /.section-title -->
 							<div class="divide20"></div>
@@ -328,7 +328,7 @@
 					<div class="row">						
 						<div class="col-md-8 col-sm-12 col-xs-12">						
 							<div class="section-title">
-								<h3>Personal developement Consulting </h3>								
+								<a href="<?php echo get_page_link(245); ?>"><h3>Personal developement Consulting </h3></a>						
 							</div>							
 							<!-- /.section-title -->
 							<div class="divide20"></div>
