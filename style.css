@@ -14,7 +14,7 @@ Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-
 /* #Site Styles
 ================================================== */
 
-@import url("<?php bloginfo('template_url') ?>/resources/fonts/Lato/latofonts.css");
+@import url("resources/fonts/Lato/latofonts.css");
 
 /*-----------------------------------------------------------------------------------*/
 
@@ -318,7 +318,7 @@ ul.top-social li a :hover {
 
 .search-submit {
     background-color: transparent;
-    background-image: url('<?php bloginfo('template_url') ?>/resources/images/search.png');
+    background-image: url('resources/images/search.png');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
@@ -823,7 +823,7 @@ ul.top-social li a :hover {
 /*-----------------------------------------------------------------------------------*/
 
 .events {
-    background: url('<?php bloginfo('template_url') ?>/resources/images/bg.jpg') no-repeat;
+    background: url('resources/images/bg.jpg') no-repeat;
     background-position: center center;
     background-size: cover;
     color: #fefefe;
