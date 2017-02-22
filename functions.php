@@ -1,12 +1,11 @@
 <?php
-
 /** Walker_Nav_Menu class */
 require_once 'consultToSee-walker-nav-menu.php';
 
 if(!function_exists('consultToSee_setup')) {
     function consultToSee_setup()
     {
-        add_theme_support('title_tag');
+        add_theme_support('title-tag');
 		add_theme_support('menus');
         add_theme_support( 'post-thumbnails' ); 
 		register_consultToSee_menus();
@@ -30,6 +29,35 @@ function consultToSee_scripts()
 {
     wp_enqueue_style('consultToSee_style',get_stylesheet_uri());
     wp_enqueue_style('consultToSee_google_fonts','https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700');
+	
+	$template_url = get_template_directory_uri();
+	
+	// jQuery.
+	//wp_enqueue_script( 'jquery' );
+	wp_deregister_script('jquery');
+	wp_enqueue_script( 'jquery', $template_url . '/vendors/js/jquery.min.js',array(), null, true);
+
+	// Bootstrap
+	wp_enqueue_script( 'bootstrap-script', $template_url . '/vendors/js/bootstrap.min.js', array( 'jquery' ), null, true );
+	
+	wp_enqueue_script( 'plugins', $template_url . '/vendors/plugins.js', array( 'jquery' ), null, true );
+	wp_enqueue_script( 'scripts', $template_url . '/resources/js/scripts.js', array( 'jquery' ), null, true );	
+		
+	// normalize 	
+	wp_enqueue_style( 'normalize', $template_url . '/vendors/css/normalize.css' );
+	// Bootstrap 
+	wp_enqueue_style( 'bootstrap-style', $template_url . '/vendors/css/bootstrap.min.css' );
+	// Font-awesome
+	wp_enqueue_style( 'font-awesome', $template_url . '/vendors/css/font-awesome.min.css' );
+	// materialdesignicons
+	wp_enqueue_style( 'materialdesignicons', $template_url . '/vendors/css/materialdesignicons.min.css' );
+	
+	//plugins
+	wp_enqueue_style( 'plugins', $template_url . '/vendors/smartmenu/plugins.css' );
+	
+
+	//Main Style
+	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 }
 add_action('wp_enqueue_scripts', 'consultToSee_scripts');
 
@@ -77,4 +105,15 @@ add_action('widgets_init','consultToSee_widget_init');
 
 
 // }
+
+//additional function
+function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
+	$post = $post_id ? get_post( $post_id ) : get_post( get_the_ID() );
+	$text = get_the_excerpt( $post );
+	if ( ! $text ) {
+		$text = get_post_field( 'post_content', $post );
+	}
+	$generated_excerpt = wp_trim_words( $text, $num_words );
+	return apply_filters( 'get_the_excerpt', $generated_excerpt, $post );
+}
 ?>
