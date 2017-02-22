@@ -7,13 +7,19 @@
 			<div id="page-header">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="/">Home</a></li>						
+						<li><a href="#">Home</a></li>						
 						<li class="active">Management Consulting</li>
 					</ul>
 				</div>
 			</div>
 			<!-- #page-header -->
 			
+			<?php
+				$the_query = new WP_Query(array(
+					'posts_per_page' => 6,
+					'category_name' => 'service', // this is the category SLUG
+				));
+			 ?>			  
 			<div class="container">
 				<h1 class="text-header text-center">Management Consulting</h1>
 				<div class="summary">
@@ -21,84 +27,35 @@
 					<p class="text-center"><i>Using the powerful method of systemic constellation, we support you in</i></p>
 				</div>
 				
-				<div class="divide40"></div>
-				<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+
+			 <?php
+				$postCount = 1;
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+              ?>
+			  <?php
+			  $postQuery = get_post(get_the_ID());  
+			  if($postCount % 2 > 0){
+				echo '<div class="divide20"></div> <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
+			  }
+			 ?>			   				
 					<div class="col-sm-6">
 						<div class="feature feature-s">
-							<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-01.png" alt="" /> </div>
-							<h4>Change Management Process</h4>
-							<p>Are you planning an important step in your business? What pushes you to change and what is stopping you</p>
-							<p>With systemic constellation you get a new perspective on what pushes you to change and what is stopping you.</p>
+							<div class="icon icon-s"> <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" /> </div>
+							<h4><?php echo the_title(); ?></h4>
+							<?php echo apply_filters('the_content', $postQuery->post_content); ?>
 						</div>
 						<!--/.feature --> 
 					</div>
-					<!--/column -->
-					
-					<div class="col-sm-6">
-						<div class="feature feature-s">
-							<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-02.png" alt="" /> </div>
-							<h4>Strategy Review and Development</h4>
-							<p>You are developing or have developed a strategy to reach a certain goal.</p>
-							<p>With systemic constellation we can analyse how effective the different measures of your strategy paper are. In addition we can simulate a modified plan.</p>
-						</div>
-						<!--/.feature --> 
-					</div>
-					<!--/column --> 
-					
-				</div>
-				<!--/.row -->
-				
-				<div class="divide20"></div>				
-				<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-					<div class="col-sm-6">
-						<div class="feature feature-s">
-							<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-03.png" alt="" /> </div>
-							<h4>Market Research</h4>
-							<p>You want to know how your product is received by different customers or you are planning to launch a new product. </p>
-							<p>With systemic constellation you get a direct insight into the perspective of your customers.</p>
-						</div>
-						<!--/.feature --> 
-					</div>
-					<!--/column -->
-				
-					<div class="col-sm-6">
-						<div class="feature feature-s">
-							<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-04.png" alt="" /> </div>
-							<h4>Project Management</h4>
-							<p>Seting up and Improving your collaboratiion with partners of various cultural backgrounds and different company values </p>
-						</div>
-						<!--/.feature --> 
-					</div>
-					<!--/column --> 							
-				</div>
-				<!--/.row -->
-				
-				<div class="divide20"></div>
-				<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
-					<div class="col-sm-6">
-						<div class="feature feature-s">
-							<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-05.png" alt="" /> </div>
-							<h4>Setting up and Improving Intercultural Collabaration</h4>
-							<p>You are collaborating with partners of various cultural backgrounds and different company values or are planning to start a collaboration. Neglecting the importance of cultural backgrounds and company values are the biggest obstacles for a successful partnership. </p>
-							<p>With systemic constellation we help you to understand your partners better, enabling you to improve an existing partnership or to be prepared for a planned collaboration. </p>
-						</div>
-						<!--/.feature --> 
-					</div>
-					<!--/column -->	
-					<div class="col-sm-6">
-						<div class="feature feature-s">
-							<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-11.png" alt="" /> </div>
-							<h4>Organisation Development</h4>
-							<p>Is your organisation more effective or adapt it to new requirements? Which changes are useful and which not</p>
-						</div>
-						<!--/.feature --> 
-					</div>
-					<!--/column -->
-				</div>
-				<!--/.row --> 
-	
+					<?php					 
+						if($postCount % 2 == 0){
+							echo '</div>';
+						};
+						$postCount = $postCount + 1;
+					 ?>
+			<?php endwhile; ?>	
+			
 				<div class="divide60"></div>
-				<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="1.0s">
+				<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
 					<div class="col-md-4 col-md-offset-2 col-sm-12 col-xs-12 text-center wow fadeIn position-relative" data-wow-duration="1s">
 						<div class="quote style-1 bg-quote-left">
 							<blockquote>

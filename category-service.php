@@ -5,7 +5,6 @@
 <?php
 $categories = get_the_category();
 $category_slug = $categories[0]->slug ;
-echo $category_slug;
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
   'posts_per_page' => 3,
@@ -55,7 +54,7 @@ $my_query = new WP_Query( $args );
 <!--<div class="nav-previous alignleft"><?php next_posts_link(); ?></div>
 <div class="nav-next alignright"><?php previous_posts_link( 'Previous posts' ); ?></div>-->
 
-				<?php the_posts_pagination() ?>
+				<?php echo paginate_links(); ?>
 
 
 				<div class="text-center">

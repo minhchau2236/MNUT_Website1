@@ -2,38 +2,25 @@
     /* Main Header Template */
 ?>
 <!DOCTYPE html>
-<html<?php language_attributes();?>> 
+<html <?php language_attributes();?>> 
 
-  <head>
-    <meta charset="utf-8">
+  <head>  	
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+	
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="<?php bloginfo('template_url') ?>/images/favicon.ico">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>index</title>
-
-	<!-- normalize -->
-	<link href="<?php bloginfo('template_url') ?>/vendors/css/normalize.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="<?php bloginfo('template_url') ?>/vendors/css/bootstrap.min.css" rel="stylesheet">
-	<link href="<?php bloginfo('template_url') ?>/vendors/css/font-awesome.min.css" rel="stylesheet">	
-	<link href="<?php bloginfo('template_url') ?>/vendors/css/materialdesignicons.min.css" rel="stylesheet">	
 	
-	<link href="<?php bloginfo('template_url') ?>/vendors/revolution/css/settings.css" rel="stylesheet" type="text/css">
-	<link href="<?php bloginfo('template_url') ?>/vendors/revolution/css/layers.css" rel="stylesheet" type="text/css">
-	<link href="<?php bloginfo('template_url') ?>/vendors/revolution/css/navigation.css" rel="stylesheet" type="text/css">
-	
-	<link href="<?php bloginfo('template_url') ?>/vendors/smartmenu/plugins.css" rel="stylesheet">
-	<link href="<?php bloginfo('template_url') ?>/style.css" rel="stylesheet">
-	
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url') ?>/resources/images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_url') ?>/resources/images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_url') ?>/resources/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="<?php bloginfo('template_url') ?>/resources/images/favicons/manifest.json">
+	<link rel="mask-icon" href="<?php bloginfo('template_url') ?>/resources/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+    
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<?php wp_head(); ?>
   </head>
-  <body>	
+  <body <?php body_class(isset($class) ? $class : ''); ?> >	
 	<div class="wrapper">	
 		<div class="topbar width-common">
 			<div class="container">
@@ -66,8 +53,8 @@
 		<div class="navbar navbar-default default header1" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<div class="navbar-brand"><a href="index.html">
-							<img src="<?php bloginfo('template_url') ?>/resources/images/logo.png" alt="" /></a></div>
+						<div class="navbar-brand"><a href="<?php bloginfo('url'); ?>">
+							<img src="<?php bloginfo('template_url') ?>/resources/images/Logo.png" alt="" /></a></div>
 						
 						<button type="button" class="search-btn-mobile" data-toggle="collapse" data-target=".search-collapse"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
 						
