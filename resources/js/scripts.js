@@ -1,5 +1,6 @@
 $(document).ready(function() {
     'use strict';
+		
     /*-----------------------------------------------------------------------------------*/
     /*	SCROLL NAVIGATION HIGHLIGHT
     /*-----------------------------------------------------------------------------------*/
@@ -191,64 +192,28 @@ $(document).ready(function() {
     /*	OWL CAROUSEL
 	/*-----------------------------------------------------------------------------------*/
     
-    $('.testimonials.col2').owlCarousel({
-        autoplay: true,
-        autoplayTimeout: 10000,
-        loop: true,
-        margin: 30,
-        nav: false,
-        dots: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-
-            },
-            1024: {
-                items: 2
-            }
-        }
-    });
+    $('.testimonials.col1').owlCarousel({
+	    autoplay: true,
+		autoplayTimeout: 10000,
+		loop: true,
+		margin: 30,
+		nav: true,
+		navText: ["", ""],		
+		dots: true,
+		items: 1		
+	});
     
     
     /*-----------------------------------------------------------------------------------*/
     /*	REVOLUTION
 	/*-----------------------------------------------------------------------------------*/
-    $("#slider1").revolution({
-        sliderType: "standard",
-        sliderLayout: "auto",
-        spinner: "spinner",
-        delay: 9000,
-        shadow: 0,
-        gridwidth: 1170,
-        gridheight: 470,
-        responsiveLevels: [4096, 1024, 778, 480],
-        navigation: {
-            arrows: {
-                enable: true,
-                hide_onleave: true
-            },
-            touch:{
-	        	touchenabled:"on",
-            },
-            bullets: {
-                enable: false,
-                hide_onleave: false,
-                h_align: "center",
-                v_align: "bottom",
-                space: 5,
-                h_offset: 0,
-                v_offset: 20
-            }
-        }
-    });
+
     
     /*-----------------------------------------------------------------------------------*/
     /*	PARALLAX MOBILE
 	/*-----------------------------------------------------------------------------------*/
-   
+		
+
     /*-----------------------------------------------------------------------------------*/
     /*	BACKGROUND VIDEO PARALLAX
 	/*-----------------------------------------------------------------------------------*/

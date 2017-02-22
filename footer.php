@@ -9,7 +9,7 @@
 							<a href="#"><img src="<?php bloginfo('template_url') ?>/resources/images/Logo_Footer.png" alt="" /></a>
 							<div class="divide30"></div>							
 							<ul class="tag-list">
-								<li> <a href="#"><i class="mdi mdi-home"></i> 52A Tran Hung Dao, District 1, Ho Chi Minh City</a> </li>
+								<li> <a href="#"><i class="mdi mdi-home"></i>85/2B Tran Ke Xuong, Phu Nhuan District, HCM City</a> </li>
 								<li> <a href="#"><i class="mdi mdi-phone"></i> +84 163 969 1059</a> </li>
 								<li> <a href="#"><i class="mdi mdi-email-outline"></i>info@consultosee.com</a> </li>
 								<li> <a href="#"><i class="mdi mdi-web"></i>www.consultosee.com</a> </li>
@@ -67,13 +67,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php bloginfo('template_url') ?>/vendors/js/bootstrap.min.js"></script>			
 	
-	<!-- slider -->
-	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/vendors/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script> 
-	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/vendors/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script> 
-	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script> 
-	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
-	
+		<script src="<?php bloginfo('template_url') ?>/vendors/js/owl.carousel.min.js"></script>
 	<script src="<?php bloginfo('template_url') ?>/vendors/plugins.js"></script>	
 	<script src="<?php bloginfo('template_url') ?>/resources/js/scripts.js"></script>
 

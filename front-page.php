@@ -3,210 +3,47 @@
     get_header();
 ?>
 <div class="content-wrapper width-common"> 
-			<div class="rev_slider_wrapper">
-				<div id="slider1" class="rev_slider" data-version="5.0">
-					<ul>
-						<li data-transition="fade"> <img src="<?php bloginfo('template_url') ?>/resources/images/bg_slider.jpg" alt="" />
-							<div class="tp-caption   tp-resizeme" 
-								data-x="-50" 
-								data-y="bottom" 
-								data-voffset="" 
-								data-width="['none','none','none','none']" 
-								data-height="['none','none','none','none']" 
-								data-transform_idle="o:1;" 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:700;e:Power3.easeInOut;" 
-								data-transform_out="opacity:0;s:700;" 
-								data-start="500" 
-								data-responsive_offset="on" 
-								data-end="12000" 
-								style="z-index: 8; visibility: hidden; transition: none; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 14px; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; opacity: 0.0001; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform-origin: 50% 50% 0px;">
-								<img src="<?php bloginfo('template_url') ?>/resources/images/Layer-0.png" alt="" width="857" height="434" data-ww="857px" data-hh="434px" data-no-retina="" style="width: 296px; height: 614px; transition: none; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 14px;">
-							</div>
-								
-							<div class="tp-caption medium text-right" 
-								data-x="right" 
-								data-hoffset="" 
-								data-y="center"  
-								data-voffset="-150" 
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']"
-								data-transform_idle="o:1;"				 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1300;e:Power2.easeOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;" 
-								data-start="1000" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 9;color: #303030;font-size: 18px;font-weight: 400;line-height: 70px;text-transform: uppercase;">
-								<p>Build your professional website</p>								
-							</div>
-							
-							<div class="tp-caption tp-resizeme  text text-right" 
-								data-x="right" 
-								data-hoffset="" 
-								data-y="center"  
-								data-voffset="-100" 
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']"
-								data-transform_idle="o:1;"				 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1300;e:Power2.easeOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;" 
-								data-start="2000" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 9;color: #35c0cc;font-size: 36px;font-weight: 900;line-height: 70px;text-transform: uppercase;">								
-								<p>Make yourself a picture !</p>
-							</div>
-							
-							<div class="tp-caption tp-resizeme  text text-right" 
-								data-x="right" 
-								data-hoffset="0" 
-								data-y="center" 
-								data-voffset="-30" 
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']" 
-								data-transform_idle="o:1;" 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1300;e:Power2.easeOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;"  
-								data-start="2500" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 9;color: grey;font-size: 16px;font-weight: 400;line-height: 22px;">
-								You want to be more successful in your life and at peace with yourself. You want to be<br/> more happy and successful with your company. By using the powerful method of<br/> Systemic Constellation with Torten Seeger
-							</div>
-							
-							<div class="tp-caption medium text-right" 
-								data-x="right" 
-								data-hoffset="" 
-								data-y="center" 
-								data-voffset="['65','65','65','90']"
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']"
-								data-transform_idle="o:1;"				 
-								data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1300;e:Power4.easeInOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;" 
-								data-start="2200" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 10; white-space: nowrap; font-size: 30px; line-height: 30px;">
-								<span class="leanMore">Lean more about</span>
-								<a href="#" class="btn btn-transparent btn-large">Our workshop</a></div>
-						</li>					
-						
-						<li data-transition="fade"> <img src="<?php bloginfo('template_url') ?>/resources/images/bg_slider.jpg" alt="" />
-							<div class="tp-caption   tp-resizeme" 
-								data-x="-50" 
-								data-y="bottom" 
-								data-voffset="" 
-								data-width="['none','none','none','none']" 
-								data-height="['none','none','none','none']" 
-								data-transform_idle="o:1;" 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:700;e:Power3.easeInOut;" 
-								data-transform_out="opacity:0;s:700;" 
-								data-start="500" 
-								data-responsive_offset="on" 
-								data-end="12000" 
-								style="z-index: 8; visibility: hidden; transition: none; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 14px; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; opacity: 0.0001; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform-origin: 50% 50% 0px;">
-								<img src="<?php bloginfo('template_url') ?>/resources/images/Layer-0.png" alt="" width="857" height="434" data-ww="857px" data-hh="434px" data-no-retina="" style="width: 296px; height: 614px; transition: none; line-height: 0px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 400; font-size: 14px;">
-							</div>
-								
-							<div class="tp-caption medium text-right" 
-								data-x="right" 
-								data-hoffset="" 
-								data-y="center"  
-								data-voffset="-150" 
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']"
-								data-transform_idle="o:1;"				 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1300;e:Power2.easeOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;" 
-								data-start="1000" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 9;color: #303030;font-size: 18px;font-weight: 400;line-height: 70px;text-transform: uppercase;">
-								<p>Build your professional website</p>								
-							</div>
-							
-							<div class="tp-caption tp-resizeme  text text-right" 
-								data-x="right" 
-								data-hoffset="" 
-								data-y="center"  
-								data-voffset="-100" 
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']"
-								data-transform_idle="o:1;"				 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1300;e:Power2.easeOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;" 
-								data-start="2000" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 9;color: #35c0cc;font-size: 36px;font-weight: 900;line-height: 70px;text-transform: uppercase;">								
-								<p>Make yourself a picture !</p>
-							</div>
-							
-							<div class="tp-caption tp-resizeme  text text-right" 
-								data-x="right" 
-								data-hoffset="0" 
-								data-y="center" 
-								data-voffset="-30" 
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']" 
-								data-transform_idle="o:1;" 
-								data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1300;e:Power2.easeOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;"  
-								data-start="2500" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 9;color: grey;font-size: 16px;font-weight: 400;line-height: 22px;">
-								You want to be more successful in your life and at peace with yourself. You want to be<br/> more happy and successful with your company. By using the powerful method of<br/> Systemic Constellation with Torten Seeger
-							</div>
-							
-							<div class="tp-caption medium text-right" 
-								data-x="right" 
-								data-hoffset="" 
-								data-y="center" 
-								data-voffset="['65','65','65','90']"
-								data-width="['auto','auto','auto','auto']"
-								data-height="['auto','auto','auto','auto']"
-								data-transform_idle="o:1;"				 
-								data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1300;e:Power4.easeInOut;" 
-								data-transform_out="s:1300;e:Power3.easeInOut;s:1300;e:Power3.easeInOut;" 
-								data-start="2200" 
-								data-splitin="none" 
-								data-splitout="none" 
-								data-responsive_offset="on" 
-								data-end="9000" 
-								style="z-index: 10; white-space: nowrap; font-size: 30px; line-height: 30px;">
-								<span class="leanMore">Lean more about</span>
-								<a href="#" class="btn btn-transparent btn-large">Our workshop</a></div>
-						</li>					
-												
-					</ul>
-					<div class="tp-bannertimer tp-bottom"></div>
+	<div class="intro-site">
+		<div class="bg-parallax" style="background-image: url(<?php bloginfo('template_url') ?>/resources/images/bg_slider.jpg);">
+			<div class="container">
+				<div class="block-text">
+					<div class="divide40"></div>
+					<div class="txt-slogan-small">
+						<p>Business consulting and personal consulting</p>								
+					</div>
+				
+					<div class="txt-slogan-big">								
+						<p>Make yourself a picture !</p>
+					</div>
+					
+					<div class="txt-slogan-descript">
+						<p>You want to be more successful in your life and at peace with yourself. You want to be<br/> 
+						more happy and successful with your company. By using the powerful method of <br/>
+						Systemic Constellation with <i style="color: #35c0cc;">Torsten Seeger</i> , we help you...
+						</p>
+					</div>
+					<br/>
+					<div>
+						<span class="leanMore">Lean more at</span>
+						<a href="#" class="btn btn-transparent btn-large">Our events</a>
+					</div>
 				</div>
-				<!-- /.rev_slider --> 
-			  </div>
-			<!-- /.rev_slider_wrapper -->
+				<div class="block-img" >
+					<div class="thumb-img">
+						<img class="img-responsive" src="<?php bloginfo('template_url') ?>/resources/images/girl_on_ladder.png" alt="ảnh"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.intro-site -->		
 			
 			<div class="width-common ">
 				<div class="container inner">				
 					<div class="row">					
 						<div class="col-md-7 col-sm-12 col-xs-12">							
 							<div class="section-title">
-								<h3>Systemic Constellation</h3>								
+								<h3>Systemic Constellation</h3>							
 							</div>
 							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
 								<div class="col-sm-12">
@@ -214,7 +51,7 @@
 										Systemic Constellation enables you to get into your own power and to take control by yourself! <br/>
 										The method enables you To See your roots as an eternal powerbank, rather than an excuse for shortcomings! To See difficulties as the rocks on your path, which strengthen you by removing them.									
 									</div>
-									<a href="#" class="btn-more pull-right">More about our Method</a>
+									<a href="<?php echo get_page_link(250) ?>" class="btn-more pull-right">More about our Method</a>
 								</div>																	
 							</div>
 							<!--/.row -->
@@ -249,71 +86,43 @@
 						<!--/column -->
 						<div class="col-md-8 col-sm-12 col-xs-12">							
 							<div class="section-title">
-								<h3>management consulting</h3>								
+								<a href="<?php echo get_page_link(243); ?>"><h3>management consulting</h3></a>							
 							</div>
 							<!-- /.section-title -->
-							<div class="divide20"></div>
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+								<?php
+									$the_service_query = new WP_Query(array(
+										'posts_per_page' => 6,
+										'category_name' => 'service', // this is the category SLUG
+									));
+								?>		
+							<?php
+							$service_postCount = 1;
+							while ( $the_service_query->have_posts() ) : $the_service_query->the_post();
+							?>
+							<?php
+							$service_postQuery = get_post(get_the_ID());  
+							if($service_postCount == 1){
+								echo '<div class="divide20"></div>';
+							}
+							if($service_postCount % 2 > 0){
+								echo '<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
+							}
+							?>		
 								<div class="col-sm-6">
 									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-01.png" alt="" /> </div>
-										<h4>Change Management Process</h4>
-										<p>Is your organisation effective and adaptive to new requirements? Which changes are useful and which not. </p>
+										<div class="icon icon-s"> <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" /> </div>
+										<h4><?php echo the_title(); ?></h4>
+										<p><?php echo km_get_the_excerpt(get_the_ID(), 20); ?></p>
 									</div>
 									<!--/.feature --> 
 								</div>
-								<!--/column -->
-								
-								<div class="col-sm-6">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-02.png" alt="" /> </div>
-										<h4>Strategy Review and Development</h4>
-										<p>Analyse how effective the different measures of your strategy paper are. We can simulate a modified plan</p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column --> 
-								
-							</div>
-							<!--/.row -->
-							<div class="divide20"></div>
-							
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-								<div class="col-sm-6">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-03.png" alt="" /> </div>
-										<h4>Market Research</h4>
-										<p>How your product is received by different customers. Get a direct insight into the perspective of your customers. </p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column -->
-							
-								<div class="col-sm-6">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-04.png" alt="" /> </div>
-										<h4>Project Management</h4>
-										<p>Seting up and Improving your collaboratiion with partners of various cultural backgrounds and different company values </p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column --> 							
-							</div>
-							<!--/.row -->
-							
-							<div class="divide20"></div>
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-								<div class="col-sm-12">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-05.png" alt="" /> </div>
-										<h4>Setting up and Improving Intercultural Collabaration</h4>
-										<p>Seting up and Improving your collaboratiion with partners of various cultural backgrounds and different company values </p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column -->													
-							</div>
-							<!--/.row --> 							
+								<?php					 
+									if($service_postCount % 2 == 0){
+										echo '</div>';
+									};
+									$service_postCount = $service_postCount + 1;
+								?>
+						<?php endwhile; ?>								
 						</div>
 						<!--/column -->						
 					</div>
@@ -328,70 +137,51 @@
 					<div class="row">						
 						<div class="col-md-8 col-sm-12 col-xs-12">						
 							<div class="section-title">
-								<h3>Personal developement Consulting </h3>								
-							</div>							
-							<!-- /.section-title -->
-							<div class="divide20"></div>
-							
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-								<div class="col-sm-12">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-06.png" alt="" /> </div>
-										<h4>Improve the relationships with our parents</h4>
-										<p>The relationship with our parents is not always easy. But our parents are our roots.  With systemic constellation we acknowledge them as they are, live our own life freely and in the certainty of their support</p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column -->													
+								<a href="<?php echo get_page_link(245); ?>"><h3>Personal developement Consulting </h3></a>								
 							</div>
-							<!--/.row --> 
-							<div class="divide20"></div>
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-								<div class="col-sm-6">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-07.png" alt="" /> </div>
-										<h4>Problem Solving</h4>
-										<p>See problem as something that helps you to grow, as something that shows you your strengths and qualities. </p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column -->
-								
-								<div class="col-sm-6">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-08.png" alt="" /> </div>
-										<h4>Work on Limiting Beliefs</h4>
-										<p>Limiting Beliefs beliefs are stopping us from reaching happiness and sucess. Look at these belief and leave them</p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column --> 
-								
-							</div>
-							<!--/.row -->
-							<div class="divide20"></div>
 							
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-								<div class="col-sm-6">
+							<!-- /.section-title -->				
+							<?php
+									$the_service_query = new WP_Query(array(
+										'posts_per_page' => 5,
+										'category_name' => 'service', // this is the category SLUG
+									));
+								?>		
+							<?php
+							$service_personal_postCount = 1;
+							while ( $the_service_query->have_posts() ) : $the_service_query->the_post();
+							?>
+							<?php
+							$service_postQuery = get_post(get_the_ID());  
+							if($service_personal_postCount == 1){
+								echo '<div class="divide20"></div>';
+								echo '<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
+							}
+							if($service_personal_postCount % 2 == 0){
+								echo '<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
+							}
+							if($service_personal_postCount == 1){
+								echo '<div class="col-sm-12">';
+							}
+							else
+							{
+								echo '<div class="col-sm-6">';
+							}
+							?>		
 									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-09.png" alt="" /> </div>
-										<h4>Identify and Break free of your Patterns</h4>
-										<p>Why  the same problems happen to you again and again. Have a look at what behind the pattern</p>
+										<div class="icon icon-s"> <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" /> </div>
+										<h4><?php echo the_title(); ?></h4>
+										<p><?php echo km_get_the_excerpt(get_the_ID(), 20); ?></p>
 									</div>
 									<!--/.feature --> 
 								</div>
-								<!--/column -->
-							
-								<div class="col-sm-6">
-									<div class="feature feature-s">
-										<div class="icon icon-s"> <img src="<?php bloginfo('template_url') ?>/resources/images/icon-10.png" alt="" /> </div>
-										<h4>Decsion Taking</h4>
-										<p>Need to take a decision but for some reason you can not do it. Help you to become more clear about the options and brings you to a conclusion in a natural and intuitive way. </p>
-									</div>
-									<!--/.feature --> 
-								</div>
-								<!--/column --> 							
-							</div>
+								<?php					 
+									if($service_personal_postCount % 2 > 0){
+										echo '</div>';
+									};
+									$service_personal_postCount = $service_personal_postCount + 1;
+								?>
+						<?php endwhile; ?>						
 							<!--/.row -->							
 
 						</div>
@@ -417,7 +207,8 @@
 			</div>
 			<!--/.width-common -->
 			
-			<div class="width-common events">
+			<div class="width-common events " style="background-image: url(<?php bloginfo('template_url') ?>/resources/images/bg.jpg);">
+				<div class="overlay"></div>
 				<div class="container inner">
 					<div class="section-title">
 						<h3>Our workshops</h3>								
@@ -511,36 +302,29 @@
 					</div>
 					<div class="divide20"></div>
 					<div class="carousel-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-						<div class="carousel testimonials col2">
-							<div class="item">
-								<div class="author">
-									<div class="icon"> <img src="<?php bloginfo('template_url') ?>/resources/images/avatar-01.png" alt="" /> </div>									
-								</div>
-								<!--/.author -->
+						<div class="testimonials col1 owl-carousel owl-theme">
+							<div class="item">								
 								<div class="quote">
 									<blockquote>
-										<p>&ldquo; The method is very powerful and the advices are really helpful. I gain a new perpestive of my business and how to deal with new challenges.&rdquo;</p>
+										<p>&ldquo; At first I did not really believe in the whole process and what would be happening even though I found the idea of changing perspectives very interesting. But it was really an unforgettable experience for me, especially the very serenity that I got at the end of the constellation.<br/>
+											As I am now writing about this, I do feel like peace and harmony is now a part of me.&rdquo;</p>
 									</blockquote>
 									<div class="info">
-										<h5>Mr Nguyen Anh</h5>
-										<span class="meta">IT engineer</span> 
+										<h5>
+											Le Dong Thao Vy</h5>									
 									</div>
 								</div>
 								<!--/.quote --> 
 							</div>
 							<!--/.item -->
-							<div class="item">
-								<div class="author">
-									<div class="icon"> <img src="<?php bloginfo('template_url') ?>/resources/images/avatar-02.png" alt="" /> </div>									
-								</div>
-								<!--/.author -->
+							<div class="item">								
 								<div class="quote">
 									<blockquote>
-										<p>&ldquo; A reavealing and emotional experiences. I’ve came to a more better understanding of myself and my relationships with others &rdquo;</p>
+										<p>&ldquo; To be honest, that first experience with Family Constellation in Demo set-up was actually not living up to my expectation. But the trust for my friends motivate me to registered for the experience the second time, which was totally an eye opening.
+What happened subsequently indeed left me wonder. None of them ever had had any connection with me before and yet from their sharing, it seemed that they could feel the way I feel in the situation. The interaction between them and their wish for the relationship indeed helped me conclude the approach I should follow between alternatives having been considered for a while&rdquo;</p>
 									</blockquote>
 									<div class="info">
-										<h5>Ms Tran Thi Binh</h5>
-										<span class="meta">English Teacher</span> 
+										<h5>Nguyen Lam Vinh Phuc</h5>										
 									</div>
 								</div>
 								<!--/.quote --> 
