@@ -44,7 +44,7 @@ public function widget( $args, $instance ) {
 								'<div class="post-content">'.
 									'<h3 class="post-title">'.
 										'<a href="'; echo the_permalink(); echo '">'; echo the_title(); echo '</a></h3>'.
-									'<p class="post-decription">'; echo the_content(); echo '</p>'.
+									'<p class="post-decription">'; echo the_content('...'); echo '</p>'.
 								'</div>'.
 								'<!-- /.post-content --> '.
 							'</div>';
