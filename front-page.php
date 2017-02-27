@@ -266,7 +266,6 @@
 							get_sidebar('lasted-news');
 						?>
 
-
 						<?php $my_query = new WP_Query( 'category_name=travel-news&posts_per_page=3' ); ?>
 						<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 							<!-- Do special_cat stuff... -->
@@ -303,11 +302,21 @@
 					<div class="divide20"></div>
 					<div class="carousel-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
 						<div class="testimonials col1 owl-carousel owl-theme">
+						<?php
+									$the_testimonials_query = new WP_Query(array(
+										'post_type' => 'post',
+										'posts_per_page' => 2,
+										'category_name' => 'testimonials', // this is the category SLUG
+									));
+								?>		
+							<?php
+							$testimonials_postCount = 1;
+							while ( $the_testimonials_query->have_posts() ) : $the_testimonials_query->the_post();
+							?>	
 							<div class="item">								
 								<div class="quote">
 									<blockquote>
-										<p>&ldquo; At first I did not really believe in the whole process and what would be happening even though I found the idea of changing perspectives very interesting. But it was really an unforgettable experience for me, especially the very serenity that I got at the end of the constellation.<br/>
-											As I am now writing about this, I do feel like peace and harmony is now a part of me.&rdquo;</p>
+										<?php echo the_content('...'); ?>
 									</blockquote>
 									<div class="info">
 										<h5>
@@ -315,20 +324,8 @@
 									</div>
 								</div>
 								<!--/.quote --> 
-							</div>
-							<!--/.item -->
-							<div class="item">								
-								<div class="quote">
-									<blockquote>
-										<p>&ldquo; To be honest, that first experience with Family Constellation in Demo set-up was actually not living up to my expectation. But the trust for my friends motivate me to registered for the experience the second time, which was totally an eye opening.
-What happened subsequently indeed left me wonder. None of them ever had had any connection with me before and yet from their sharing, it seemed that they could feel the way I feel in the situation. The interaction between them and their wish for the relationship indeed helped me conclude the approach I should follow between alternatives having been considered for a while&rdquo;</p>
-									</blockquote>
-									<div class="info">
-										<h5>Nguyen Lam Vinh Phuc</h5>										
-									</div>
-								</div>
-								<!--/.quote --> 
-							</div>
+							</div>								
+						<?php endwhile; ?>
 							<!--/.item -->
 						</div>
 						<!--/.carousel --> 
