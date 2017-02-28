@@ -117,7 +117,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 	return apply_filters( 'get_the_excerpt', $generated_excerpt, $post );
 }
 
-/**
+	/**
 	@ thiết lập hiển thị footer
 	@ 
 	**/
