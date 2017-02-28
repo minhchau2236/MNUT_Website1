@@ -24,7 +24,63 @@ get_header(); ?>
 
 					<!-- /column left -->
 					<div class="col-md-4">
+						
 						<div class="header-style-2">Related news</div>
+						<div class="divide20"></div>
+						<ul class="style-1">
+						<?php
+							$tags = wp_get_post_tags($post->ID);
+							if ($tags) {
+									$first_tag = $tags[0]->term_id;
+									$args=array(
+									'tag__in' => array($first_tag),
+									'post__not_in' => array($post->ID),
+									'posts_per_page'=>5,
+									'ignore_sticky_posts'=>1 );
+									$my_related_query = new WP_Query($args);
+									if( $my_related_query->have_posts() ) {
+										while ($my_related_query->have_posts()) : $my_related_query->the_post(); ?>
+											<li>
+												<i class="fa fa-caret-right"></i>
+												<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+											</li>
+										<?php
+										endwhile;
+									}
+
+								}
+								else
+								{
+									$post_categories = get_the_category();
+
+									if($post_categories)
+									{
+										$first_item = reset($post_categories);
+										$cat = get_category( $first_item );
+										$catSlug = $first_item->slug;
+										$args=array(	
+										'category_name' => $catSlug ,						
+										'post__not_in' => array($post->ID),
+										'posts_per_page'=>5,
+										'ignore_sticky_posts'=>1 );
+										$my_related_query = new WP_Query($args);
+										if( $my_related_query->have_posts() ) {
+											while ($my_related_query->have_posts()) : $my_related_query->the_post(); ?>
+												<li>
+												<i class="fa fa-caret-right"></i>
+												<a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>	
+											<?php
+											endwhile;
+										}
+									}							
+									
+								}
+								wp_reset_query();
+									
+							?>		
+							</ul>							
+
+						<!--<div class="header-style-2">Related news</div>
 						<div class="divide20"></div>
 						<ul class="style-1">
 							<li>
@@ -36,7 +92,7 @@ get_header(); ?>
 							<li>
 								<i class="fa fa-caret-right"></i>
 								<a href="#">Impression from the last promotional workshop with ConsulToSee</a></li>
-						</ul>
+						</ul>-->
 					</div>
 				</div>
 			</div>
