@@ -28,7 +28,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			<!-- #page-header -->
 			
 			<div class="container">
-				<h1 class="text-header">Recent News</h1>				
+				<h1 class="text-header"><?php single_term_title() ?></h1>				
 				<div class="row column-3">
 				 <?php if ( $my_query->have_posts() ) : ?>
                 <?php
@@ -60,6 +60,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 						?>					
 					<!-- /.pagination -->
 				</div>
+				<?php wp_reset_postdata(); ?>
 				 <?php else:  ?>
 					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 				<?php endif; ?>
