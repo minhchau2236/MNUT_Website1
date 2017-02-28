@@ -5,39 +5,27 @@
 			<div class="container inner">
 				<div class="row">
 					<div class="col-sm-5">
-						<div class="widget"> 
-							<a href="#"><img src="<?php bloginfo('template_url') ?>/resources/images/Logo_Footer.png" alt="" /></a>
-							<div class="divide30"></div>							
-							<ul class="tag-list">
-								<li> <a href="#"><i class="mdi mdi-home"></i>85/2B Tran Ke Xuong, Phu Nhuan District, HCM City</a> </li>
-								<li> <a href="#"><i class="mdi mdi-phone"></i> +84 163 969 1059</a> </li>
-								<li> <a href="#"><i class="mdi mdi-email-outline"></i>info@consultosee.com</a> </li>
-								<li> <a href="#"><i class="mdi mdi-web"></i>www.consultosee.com</a> </li>
-							</ul>
-						</div>
-						<!-- /.widget --> 
+						<?php
+							if(is_active_sidebar('footer-1')){
+								dynamic_sidebar('footer-1');
+							}
+						?>	
 					</div>
 					<!-- /column --> 
 					<div class="col-sm-3">
-						<div class="widget">
-							<h4 class="widget-title">Supported by </h4>
-							<ul class="tag-list">
-								<li> <a href="#">www.heartsanctuary.center/</a> </li>								
-								<li> <a href="#">www.horncoaching.de</a> </li>
-								<li> <a href="#">www.example.com</a> </li>
-							</ul>
-						</div>
-						<!-- /.widget -->						
+						<?php
+							if(is_active_sidebar('footer-2')){
+								dynamic_sidebar('footer-2');
+							}
+						?>						
 					</div>
 					<!-- /column -->
 					<div class="col-sm-4">
-						<div class="widget">
-							<h4 class="widget-title">Join Us on Facebook</h4>
-							<div class="facebook">
-								<img src="<?php bloginfo('template_url') ?>/resources/images/Fb_widget.png"/>
-							</div>
-						</div>
-						<!-- /.widget -->	
+						<?php
+							if(is_active_sidebar('footer-3')){
+								dynamic_sidebar('footer-3');
+							}
+						?>		
 					</div>
 					<!-- /column -->
 				</div>

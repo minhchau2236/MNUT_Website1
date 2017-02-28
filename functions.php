@@ -116,4 +116,42 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 	$generated_excerpt = wp_trim_words( $text, $num_words );
 	return apply_filters( 'get_the_excerpt', $generated_excerpt, $post );
 }
+
+/**
+	@ thiết lập hiển thị footer
+	@ 
+	**/
+	register_sidebar(
+		array(
+			'name' => 'Footer Area 1',
+			'id'   => 'footer-1',
+			'description'=> 'Appears in the footer area',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '<aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' =>'</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Footer Area 2',
+			'id'   => 'footer-2',
+			'description'=> 'Appears in the footer area',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '<aside>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' =>'</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Footer Area 3 (Facebook)',
+			'id'   => 'footer-3',
+			'description'=> 'Appears in the footer area',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '<aside>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' =>'</h4>',
+		)
+	);
 ?>
