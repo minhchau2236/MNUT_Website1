@@ -4,70 +4,28 @@
 ?>
 <div class="content-wrapper width-common"> 
 	<div class="intro-site">
-		<div class="bg-parallax" style="background-image: url(<?php bloginfo('template_url') ?>/resources/images/bg_slider.jpg);">
-			<div class="container">
-				<div class="block-text">
-					<div class="divide40"></div>
-					<div class="txt-slogan-small">
-						<p>Business consulting and personal consulting</p>								
-					</div>
-				
-					<div class="txt-slogan-big">								
-						<p>Make yourself a picture !</p>
-					</div>
-					
-					<div class="txt-slogan-descript">
-						<p>You want to be more successful in your life and at peace with yourself. You want to be<br/> 
-						more happy and successful with your company. By using the powerful method of <br/>
-						Systemic Constellation with <i style="color: #35c0cc;">Torsten Seeger</i> , we help you...
-						</p>
-					</div>
-					<br/>
-					<div>
-						<span class="leanMore">Lean more at</span>
-						<a href="#" class="btn btn-transparent btn-large">Our events</a>
-					</div>
-				</div>
-				<div class="block-img" >
-					<div class="thumb-img">
-						<img class="img-responsive" src="<?php bloginfo('template_url') ?>/resources/images/girl_on_ladder.png" alt="ảnh"/>
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php							
+			if(is_active_sidebar('banner') && is_home()){
+				dynamic_sidebar('banner');			
+			}
+		?>	
 	</div>
 	<!-- /.intro-site -->		
 			
-			<div class="width-common ">
-				<div class="container inner">				
-					<div class="row">					
-						<div class="col-md-7 col-sm-12 col-xs-12">							
-							<div class="section-title">
-								<h3>Systemic Constellation</h3>							
-							</div>
-							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-								<div class="col-sm-12">
-									<div class="decription">
-										Systemic Constellation enables you to get into your own power and to take control by yourself! <br/>
-										The method enables you To See your roots as an eternal powerbank, rather than an excuse for shortcomings! To See difficulties as the rocks on your path, which strengthen you by removing them.									
-									</div>
-									<a href="<?php echo get_page_link(250) ?>" class="btn-more pull-right">More about our Method</a>
-								</div>																	
-							</div>
-							<!--/.row -->
-							<div class="divide40"></div>							
-						</div>
-						<!--/column --> 
-						<div class="col-md-5 col-sm-12 col-xs-12 text-center wow fadeIn" data-wow-duration="1s">							
-							<figure> <img src="<?php bloginfo('template_url') ?>/resources/images/img-1.png" alt="" /> </figure>							
-						</div>
-						<!--/column -->
-					</div>
-					<!--/.row --> 
-				</div>
-				<!--/.container --> 
+	<div class="width-common ">
+		<div class="container inner">				
+			<div class="row">					
+				<?php							
+					if(is_active_sidebar('block-1') && is_home()){
+						dynamic_sidebar('block-1');			
+					}
+				?>	
 			</div>
-			<!--/.width-common -->
+			<!--/.row --> 
+		</div>
+		<!--/.container --> 
+	</div>
+	<!--/.width-common -->
 			
 			<div class="width-common bg-color-1">
 				<div class="container inner">					
