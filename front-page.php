@@ -4,37 +4,127 @@
 ?>
 <div class="content-wrapper width-common"> 
 	<div class="intro-site">
-		<?php							
-			if(is_active_sidebar('banner') && is_home()){
-				dynamic_sidebar('banner');			
-			}
-		?>	
+		<div class="bg-parallax" style="background-image: url(<?php bloginfo('template_url') ?>/resources/images/bg_slider.jpg);">
+			<div class="container">
+				<div class="block-text">
+					<div class="divide40"></div>
+					<div class="txt-slogan-small">
+						<p>Business consulting and personal consulting</p>								
+					</div>
+				
+					<div class="txt-slogan-big">								
+						<p>Make yourself a picture !</p>
+					</div>
+					
+					<div class="txt-slogan-descript">
+						<p>You want to be more successful in your life and at peace with yourself. You want to be<br/> 
+						more happy and successful with your company. By using the powerful method of <br/>
+						Systemic Constellation with <i style="color: #35c0cc;">Torsten Seeger</i> , we help you...
+						</p>
+					</div>
+					<br/>
+					<div>
+						<span class="leanMore">Lean more at</span>
+						<a href="#" class="btn btn-transparent btn-large">Our events</a>
+					</div>
+				</div>
+				<div class="block-img" >
+					<div class="thumb-img">
+						<img class="img-responsive" src="<?php bloginfo('template_url') ?>/resources/images/girl_on_ladder.png" alt="ảnh"/>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- /.intro-site -->		
 			
-	<div class="width-common ">
-		<div class="container inner">				
-			<div class="row">					
-				<?php							
-					if(is_active_sidebar('block-1') && is_home()){
-						dynamic_sidebar('block-1');			
-					}
-				?>	
+			<div class="width-common ">
+				<div class="container inner">				
+					<div class="row">					
+						<div class="col-md-7 col-sm-12 col-xs-12">							
+							<div class="section-title">
+								<h3>Systemic Constellation</h3>							
+							</div>
+							<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+								<div class="col-sm-12">
+									<div class="decription">
+										Systemic Constellation enables you to get into your own power and to take control by yourself! <br/>
+										The method enables you To See your roots as an eternal powerbank, rather than an excuse for shortcomings! To See difficulties as the rocks on your path, which strengthen you by removing them.									
+									</div>
+									<a href="<?php echo get_page_link(250) ?>" class="btn-more pull-right">More about our Method</a>
+								</div>																	
+							</div>
+							<!--/.row -->
+							<div class="divide40"></div>							
+						</div>
+						<!--/column --> 
+						<div class="col-md-5 col-sm-12 col-xs-12 text-center wow fadeIn" data-wow-duration="1s">							
+							<figure> <img src="<?php bloginfo('template_url') ?>/resources/images/img-1.png" alt="" /> </figure>							
+						</div>
+						<!--/column -->
+					</div>
+					<!--/.row --> 
+				</div>
+				<!--/.container --> 
 			</div>
-			<!--/.row --> 
-		</div>
-		<!--/.container --> 
-	</div>
-	<!--/.width-common -->
+			<!--/.width-common -->
 			
 			<div class="width-common bg-color-1">
 				<div class="container inner">					
 					<div class="row">
-						<?php							
-							if(is_active_sidebar('service') && is_home()){
-								dynamic_sidebar('service');			
+						<div class="col-md-4 col-sm-12 col-xs-12 text-center wow fadeIn position-relative" data-wow-duration="1s">
+							<div class="quote style-1 bg-quote-left">
+								<blockquote>
+									<p class="quote-text">&ldquo; 
+										For problems there are the same strict ownership rules as for real estate.
+									&rdquo;</p>
+									<p>Klaus P. Horn</p>
+								</blockquote>
+							</div>
+							<figure class="img-bottom"> <img src="<?php bloginfo('template_url') ?>/resources/images/object.png" alt="" /> </figure>								
+						</div>
+						<!--/column -->
+						<div class="col-md-8 col-sm-12 col-xs-12">							
+							<div class="section-title">
+								<a href="<?php echo get_page_link(243); ?>"><h3>management consulting</h3></a>							
+							</div>
+							<!-- /.section-title -->
+								<?php
+									$the_service_query = new WP_Query(array(
+										'posts_per_page' => 6,
+										'category_name' => 'service', // this is the category SLUG
+									));
+								?>		
+							<?php
+							$service_postCount = 1;
+							while ( $the_service_query->have_posts() ) : $the_service_query->the_post();
+							?>
+							<?php
+							$service_postQuery = get_post(get_the_ID());  
+							if($service_postCount == 1){
+								echo '<div class="divide20"></div>';
 							}
-						?>					
+							if($service_postCount % 2 > 0){
+								echo '<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
+							}
+							?>		
+								<div class="col-sm-6">
+									<div class="feature feature-s">
+										<div class="icon icon-s"> <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" /> </div>
+										<h4><?php echo the_title(); ?></h4>
+										<p><?php echo km_get_the_excerpt(get_the_ID(), 20); ?></p>
+									</div>
+									<!--/.feature --> 
+								</div>
+								<?php					 
+									if($service_postCount % 2 == 0){
+										echo '</div>';
+									};
+									$service_postCount = $service_postCount + 1;
+								?>
+						<?php endwhile; ?>								
+						</div>
+						<!--/column -->						
 					</div>
 					<!--/.row --> 
 				</div>
@@ -45,11 +135,71 @@
 			<div class="width-common">
 				<div class="container inner">
 					<div class="row">						
-						<?php							
-							if(is_active_sidebar('service_personal') && is_home()){
-								dynamic_sidebar('service_personal');			
+						<div class="col-md-8 col-sm-12 col-xs-12">						
+							<div class="section-title">
+								<a href="<?php echo get_page_link(245); ?>"><h3>Personal developement Consulting </h3></a>								
+							</div>
+							
+							<!-- /.section-title -->				
+							<?php
+									$the_service_query = new WP_Query(array(
+										'posts_per_page' => 5,
+										'category_name' => 'service', // this is the category SLUG
+									));
+								?>		
+							<?php
+							$service_personal_postCount = 1;
+							while ( $the_service_query->have_posts() ) : $the_service_query->the_post();
+							?>
+							<?php
+							$service_postQuery = get_post(get_the_ID());  
+							if($service_personal_postCount == 1){
+								echo '<div class="divide20"></div>';
+								echo '<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
 							}
-						?>							
+							if($service_personal_postCount % 2 == 0){
+								echo '<div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">';
+							}
+							if($service_personal_postCount == 1){
+								echo '<div class="col-sm-12">';
+							}
+							else
+							{
+								echo '<div class="col-sm-6">';
+							}
+							?>		
+									<div class="feature feature-s">
+										<div class="icon icon-s"> <img src="<?php echo the_post_thumbnail_url(); ?>" alt="" /> </div>
+										<h4><?php echo the_title(); ?></h4>
+										<p><?php echo km_get_the_excerpt(get_the_ID(), 20); ?></p>
+									</div>
+									<!--/.feature --> 
+								</div>
+								<?php					 
+									if($service_personal_postCount % 2 > 0){
+										echo '</div>';
+									};
+									$service_personal_postCount = $service_personal_postCount + 1;
+								?>
+						<?php endwhile; ?>						
+							<!--/.row -->							
+
+						</div>
+						<!--/column -->	
+						
+						<div class="col-md-4 col-sm-12 col-xs-12 text-center wow fadeIn position-relative" data-wow-duration="1s">
+							<div class="quote style-1 bg-quote-right">
+								<blockquote>
+									<p class="quote-text">&ldquo; 
+										To be adult does not mean to do what you are supposed to do!
+										To be adult means to follow your heart!
+									&rdquo;</p>
+									<p>Wilfred Nelles</p>
+								</blockquote>
+							</div>
+							<figure class="img-top"> <img src="<?php bloginfo('template_url') ?>/resources/images/object-2.png" alt="" /> </figure>
+						</div>
+						<!--/column -->							
 					</div>
 					<!--/.row --> 
 				</div>
@@ -104,41 +254,41 @@
 			</div>
 			<!-- /.width-common -->
 			
-			<!-- Recent news -->
 			<div class="width-common">
 				<div class="container inner">
-					<div class="section-title">
-						<h3>Recent news</h3>								
-					</div>
+					<!--<div class="section-title">
+						<h3>recent news</h3>								
+					</div>-->
 					<!-- /.section-title -->
 					<div class="divide20"></div>
-					<div class="row">							
-						 <?php
-									$the_recentNews_query = new WP_Query(array(
-										'post_type' => 'post',
-										'posts_per_page' => 3,
-										'category_name' => 'news', // this is the category SLUG
-									));
-							?>		
-							<?php
-								while ( $the_recentNews_query->have_posts() ) : $the_recentNews_query->the_post();
-							?>	
+					<div class="row">	
+						<?php
+							get_sidebar('lasted-news');
+						?>
+
+						<?php $my_query = new WP_Query( 'category_name=travel-news&posts_per_page=3' ); ?>
+						<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+							<!-- Do special_cat stuff... -->
 							<div class="post col-sm-4">
 								<figure>
-									<a href="<?php echo the_permalink(); ?>">							   
-										<img class="news-content-img" src="<?php echo the_post_thumbnail_url(); ?>" alt="" />
+									<a href="#">
+									<?php	
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail();
+									} 		
+									?>				   									
 									</a>
 								</figure>
 								<div class="post-content">
 									<h3 class="post-title">
-										<a href="<?php echo the_permalink();?>"><?php echo the_title(); ?></a></h3>
-									<p class="post-decription"><?php echo the_excerpt(); ?></p>
+										<a href="#"><?php the_title(); ?></a></h3>
+									<p class="post-decription"><?php the_content(); ?></p>
 								</div>
 								<!-- /.post-content --> 
 							</div>
-							<!-- /.post -->					
-						<?php endwhile; ?>
-						<!--/.item -->						
+						<?php endwhile; ?>		
+						<!-- /.post -->
+						
 					</div>
 				</div>
 			</div>
