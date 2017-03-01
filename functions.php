@@ -131,6 +131,36 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'after_title' =>'</h4>',
 		)
 	);
+		/**
+	@ thiết lập hiển thị service
+	@ 
+	**/
+	register_sidebar(
+		array(
+			'name' => 'homepage - service',
+			'id'   => 'service',
+			'description'=> 'Appears in the home page service part',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' =>'</h4>',
+		)
+	);
+		/**
+	@ thiết lập hiển thị service_personal
+	@ 
+	**/
+	register_sidebar(
+		array(
+			'name' => 'homepage - service_personal',
+			'id'   => 'service_personal',
+			'description'=> 'Appears in the home page service part',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' =>'</h4>',
+		)
+	);
 	/**
 	@ thiết lập hiển thị block 1
 	@ 

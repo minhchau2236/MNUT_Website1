@@ -1,6 +1,7 @@
 <?php
     /* Main Footer Template*/
 ?>
+</div>
 <footer class="footer width-common">
 			<div class="container inner">
 				<div class="row">

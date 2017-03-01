@@ -9,7 +9,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
   $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 3,
+      'posts_per_page' => 9,
       'paged' => $paged,
 	  'category_name'   => $category_slug
     );
@@ -50,8 +50,6 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				<!-- /.row -->
 				<!-- pagination here -->
 			
-
-
 				<div class="text-center">
 						<?php
 						if (function_exists('custom_pagination')) {					
