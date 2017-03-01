@@ -113,3 +113,4 @@
 			<!--/.navbar -->			
 		</header>
 		<!-- /.menu -->
+		<div class="content-wrapper width-common"> 
