@@ -122,7 +122,8 @@ h3 a {
     line-height: 28px;
 }
 
-h3 a:hover {
+h3 a:hover,
+.section-title h3 a:hover {
     color: #1fb1bd;
     text-decoration: none;
 }
@@ -133,7 +134,8 @@ h4 {
     line-height: 28px;
 }
 
-.section-title h3 {
+.section-title h3,
+.section-title h3 a {
     color: #303030;
     font-size: 28px;
     text-transform: uppercase;
@@ -876,11 +878,6 @@ ul.top-social li a :hover {
     /*
     position: absolute;
 	opacity: 0.1;*/
-}
-
-.news-content-img {
-    width: 360px;
-    height: 220px;
 }
 
 
@@ -2462,9 +2459,10 @@ figcaption {
 .txt-slogan-big {
     color: #1fb9c6;
     font-size: 36px;
-    line-height: 70px;
+    line-height: 45px;
     text-transform: uppercase;
     font-family: "LatoWebBlack", Arial, Helvetica, sans-serif;
+    padding: 10px 0;
 }
 
 .txt-slogan-small {
@@ -2500,42 +2498,49 @@ figcaption {
 }
 
 
-/* ============================================================
-  CUSTOM PAGINATION
-============================================================ */
+/* search */
 
-.custom-pagination span,
-.custom-pagination a {
-    display: inline-block;
-    padding: 2px 10px;
+.notification {
+    color: #343434;
 }
 
-.custom-pagination a {
-    background-color: #ebebeb;
-    color: #ff3c50;
+.notification .text {
+    font-size: 28px;
+    line-height: 36px;
 }
 
-.custom-pagination a:hover {
-    z-index: 2;
-    color: #b0b0b0;
-    background-color: #ecf0f1;
-    border-color: #b0b0b0;
+.text-bolder {
+    font-family: "LatoWebBlack", Arial, Helvetica, sans-serif;
 }
 
-.custom-pagination span.page-num {
-    margin-right: 10px;
-    padding: 0;
+.text-italic {
+    font-family: 'LatoWeb-LightItalic';
 }
 
-.custom-pagination span.dots {
-    padding: 0;
-    color: gainsboro;
+.text-result {
+    font-family: 'LatoWeb-LightItalic';
 }
 
-.custom-pagination span.current {
-    z-index: 3;
-    color: #fff;
-    cursor: default;
-    background-color: #1fb9c6;
-    border-color: #1fb9c6;
+.item-result {
+    margin: 20px 0;
+}
+
+.item-result .title-item {
+    color: #343434;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.item-result .title-item:hover {
+    color: #35c0cc;
+    text-decoration: none;
+}
+
+.item-result .description-item {
+    color: grey;
+}
+
+strong.search-excerpt {
+    background-color: yellow;
+    color: blue;
 }

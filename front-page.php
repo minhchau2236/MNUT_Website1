@@ -126,7 +126,7 @@
 							<div class="post col-sm-4">
 								<figure>
 									<a href="<?php echo the_permalink(); ?>">							   
-										<img class="news-content-img" src="<?php echo the_post_thumbnail_url(); ?>" alt="" />
+										<?php the_post_thumbnail( array(360, 215) ) ?>																			
 									</a>
 								</figure>
 								<div class="post-content">
