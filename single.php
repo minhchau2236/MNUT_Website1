@@ -4,10 +4,32 @@
  *
  * @package West
  */
-
 get_header(); ?>
-	<?php while ( have_posts() ) : the_post(); ?>			
-<div class="container post">
+	<?php while ( have_posts() ) : the_post(); ?>				
+			<div id="page-header">
+				<div class="container">
+					<ul class="breadcrumb">
+						<li><a href="/">Home</a></li>
+						<?php 
+								$post_categories = get_the_category();
+
+								if($post_categories)
+								{
+									$first_item = reset($post_categories);
+									$cat = get_category( $first_item );
+						?>
+						<li><a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $first_item->name ?></a></li>	
+						<?php
+							}
+						?>							
+						<li class="active"><?php echo the_title(); ?></li>
+					</ul>
+				</div>
+			</div>
+			<!-- #page-header -->	
+
+	
+            <div class="container post">
 				<div class="row">
 					<div class="col-md-8">
 				
@@ -18,10 +40,36 @@ get_header(); ?>
 				
 				<div class="row article-body">
 				<div class="col-md-8">
-					<figure> <img class="img-responsive" src="<?php the_post_thumbnail_url();  ?>" alt=""> </figure>
-					 <?php  the_content();  ?>
-			     </div>
+					<figure>
+					 <img class="img-responsive" src="<?php the_post_thumbnail_url();  ?>" alt=""> </figure>
+					 <div class="divide30"></div>				
+						
+						<div class="row ">
+							<div class="col-sm-2 col-md-2 ">
+								<div class="sticky">
+									<span>SHARE</span>
+									<ul class="social-sharer">
+										<li>
+											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook." class="link--anchor"><span class="fa fa-facebook"></span></a>
+										</li>
+										<li>
+											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="link--anchor"><span class="fa fa-twitter"></span></a>
+										</li>
+										<li>
+											<a href="#" class="link--anchor"><span class="fa fa-pinterest-p"></span></a>
+										</li>
+									</ul>
+								</div>
+								<!-- /.sticky -->
+								<div class="divide10"></div>
+							</div>
 
+							<div class="col-sm-10 col-md-10 article-body--main">
+					 			<?php  the_content();  ?>
+								<div class="divide50"></div>
+							</div>
+						</div>
+			        </div>
 					<!-- /column left -->
 					<div class="col-md-4">
 						
@@ -51,8 +99,6 @@ get_header(); ?>
 								}
 								else
 								{
-									$post_categories = get_the_category();
-
 									if($post_categories)
 									{
 										$first_item = reset($post_categories);
@@ -98,3 +144,28 @@ get_header(); ?>
 			</div>
 			<?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
+
+
+<script>
+	// sticky social sharer
+		$(document).ready(function() {
+			var sticky = $(".sticky");
+			var offset = sticky.offset();			
+			
+			
+			var mainContentHeight = $(".article-body--main").height();
+			
+			console.log("ofset: " + sticky.offset().top);
+			console.log(mainContentHeight);
+			$(window).scroll(function() {    
+				var scroll = $(window).scrollTop() ;
+				if (scroll + 150 >= offset.top & scroll <= mainContentHeight + sticky.height()) {
+					sticky.addClass("fixed");
+				} else {
+					sticky.removeClass("fixed");
+				}
+				
+				console.log("scroll: " + scroll);
+			}); 
+		});
+</script>
