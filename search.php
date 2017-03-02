@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+	<div id="page-header">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="<?php echo get_home_url(); ?>">Home</a></li>
+				<li><a href="#">News</a></li>						
+				<li class="active">search result</li>
+			</ul>
+		</div>
+	</div>
+	<!-- #page-header -->
 <?php
 $s=get_search_query();
 $args = array(
@@ -7,21 +17,42 @@ $args = array(
     // The Query
 $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
-        _e("<h2 style='font-weight:bold;color:#000'>Search Results for: ".get_query_var('s')."</h2>");
+		?>
+		<div class="container search">
+				<div class="divide50"></div>
+				<div class="notification">
+					<p>
+						<span class="text text-bolder">search result :</span>
+						<span class="text text-italic"><?php get_query_var('s')?></span>
+					</p>
+					<p class="text-result">We have found: 23 results</p>
+				</div>
+				<!-- /.notification -->
+				
+				<div class="divide10"></div>
+				<div class="list-result">
+		<?php        
         while ( $the_query->have_posts() ) {
            $the_query->the_post();
                  ?>
-                    <li>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </li>
+					<div class="item-result">
+						<h4><a class="title-item" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<div class="description-item"><?php the_excerpt(); ?></div>
+						<div class="divide20"></div>
+					</div>                   
                  <?php
-        }
+        }?>
+		</div><!--/.list-result -->
+		<?php
     }else{
 ?>
-        <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
+		<div class="notification">
+			<p><span class="text text-bolder">Nothing Found</span></p>
+		</div>
         <div class="alert alert-info">
           <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
         </div>
+	
 <?php } ?>
-
+	</div><!--/.container.search -->
 <?php get_footer(); ?>
