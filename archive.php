@@ -37,7 +37,9 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				<div class="col-sm-4">
 					<div class="blog-article">
 						<div class="blog-article-thumbnail"> 
-							<a href="<?php  echo the_permalink(); ?>"><img src="<?php the_post_thumbnail_url();  ?>" alt=""></a>
+							<a href="<?php  echo the_permalink(); ?>">
+									<?php echo the_post_thumbnail( array(360, 215) ) ?>									
+							</a>
 						</div>							
 						<div class="blog-article-details">
 							<h4><a href="<?php  echo the_permalink(); ?>"><?php the_title(); ?></a></h4>

@@ -81,10 +81,7 @@
 						?>
 						<!-- /.navbar-nav -->
 						<div id="search">
-							<form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-								<button type="submit" role="button" class="btn btn-default right"/><span class="glyphicon glyphicon-search white"></span></button>                       
-								<input id="m_search" name="s" type="text" placeholder="Enter keywords..." value="<?php echo esc_attr( get_search_query() ); ?>" style="display: none;"> 							
-							</form>
+						<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 						</div>
 					</div>
 					<!--/.nav-collapse --> 
@@ -96,11 +93,7 @@
 								<div class="nav navbar-nav search-mobile">
 									<div class="form-group customSearch">								
 										<div class="input-group">
-										<form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-											<input type="text" class="form-control"  value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="Enter keywords...">
-											<button type="submit" role="button" class="btn btn-default right"/><span class="glyphicon glyphicon-search white"></span></button>
-											<span class="btn input-group-addon danger"><span class="fa fa-search"></span></span>
-										</form>
+											<?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>
 										</div>
 									</div>						
 								</div>

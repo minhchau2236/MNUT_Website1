@@ -41,7 +41,8 @@ get_header(); ?>
 				<div class="row article-body">
 				<div class="col-md-8">
 					<figure>
-					 <img class="img-responsive" src="<?php the_post_thumbnail_url();  ?>" alt=""> </figure>
+					 <?php echo the_post_thumbnail( array(750, 400) ) ?>						 
+					</figure>
 					 <div class="divide30"></div>				
 						
 						<div class="row ">

@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 	<div id="page-header">
 		<div class="container">
@@ -10,12 +11,12 @@
 	</div>
 	<!-- #page-header -->
 <?php
-$s=get_search_query();
-$args = array(
-                's' =>$s
-            );
-    // The Query
-$the_query = new WP_Query( $args );
+	$s=get_search_query();
+	$args = array(
+					's' =>$s
+				);
+		// The Query
+	$the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 		?>
 		<div class="container search">
@@ -23,9 +24,9 @@ if ( $the_query->have_posts() ) {
 				<div class="notification">
 					<p>
 						<span class="text text-bolder">search result :</span>
-						<span class="text text-italic"><?php get_query_var('s')?></span>
+						<span class="text text-italic"><?php echo get_query_var('s')?></span>
 					</p>
-					<p class="text-result">We have found: 23 results</p>
+					<p class="text-result">We have found: <?php echo $the_query->post_count; ?> results</p>
 				</div>
 				<!-- /.notification -->
 				
@@ -36,7 +37,8 @@ if ( $the_query->have_posts() ) {
            $the_query->the_post();
                  ?>
 					<div class="item-result">
-						<h4><a class="title-item" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<?php $title = get_the_title(); $keys= explode(" ",$s); $title = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $title); ?>
+						<h4><a class="title-item" href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h4>
 						<div class="description-item"><?php the_excerpt(); ?></div>
 						<div class="divide20"></div>
 					</div>                   
