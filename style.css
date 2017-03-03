@@ -828,17 +828,19 @@ ul.top-social li a :hover {
 
 .events {
     /*background: url('resources/images/bg.jpg') no-repeat;*/
-    background-repeat: n-repeat;
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     color: #fefefe;
     position: relative;
+	min-height:350px;
 }
 
 .events .section-title h3 {
     color: #fff;
 }
-
+.events .section-title h3 a{color:inherit;}
+.events .section-title h3 a:hover{color:#1fb1bd;}
 .date-event {
     width: 65px;
     float: left;
@@ -866,7 +868,8 @@ ul.top-social li a :hover {
 .item-event h4 {
     margin-bottom: 15px;
 }
-
+.item-event h4 a{color:inherit;}
+.item-event h4 a:hover{color:#1fb1bd;text-decoration:none;}
 .events .overlay {
     left: 0;
     top: 0;
@@ -995,6 +998,10 @@ figure li a img {
 figure a img {
     display: inline;
     max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 215px;
+    width: auto;
 }
 
 
@@ -2104,6 +2111,11 @@ h1.text-header+.summary {
 .blog-article img {
     max-width: 100%;
     height: auto;
+	
+	 -o-object-fit: cover;
+    object-fit: cover;
+    height: 215px;
+    width: auto;
 }
 
 .blog-article h4 a {
@@ -2254,8 +2266,11 @@ ul.style-1 p {
 .post {
     line-height: 28px;
     color: #808080;
+	
 }
-
+.post .article-body{
+	min-height:500px;
+}
 figcaption {
     padding-top: 10px;
 }
@@ -2295,7 +2310,9 @@ figcaption {
     color: #35c0cc;
 }
 
-
+.article-body--main img {
+    max-width: 100%;
+}
 /* share social */
 
 .social-sharer li {
