@@ -90,12 +90,8 @@
 					<div class="row">
 						<div class="col-xs-12 show-search-mobile">
 							<div class="navbar-collapse collapse search-collapse">
-								<div class="nav navbar-nav search-mobile">
-									<div class="form-group customSearch">								
-										<div class="input-group">
-											<?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>
-										</div>
-									</div>						
+								<div class="nav navbar-nav search-mobile">									
+									<?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>															
 								</div>
 							</div>
 						</div>
