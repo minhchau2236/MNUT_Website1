@@ -61,42 +61,42 @@
 				<div class="overlay"></div>
 				<div class="container inner">
 					<div class="section-title">
-						<h3>Our workshops</h3>								
+						<?php
+							// Get the ID of a given category
+							$category_id = get_cat_ID( 'Our Events' );
+
+							// Get the URL of this category
+							$category_link = get_category_link( $category_id );
+						?>
+						<h3><a href="<?php echo esc_url( $category_link ); ?>">Our events</a></h3>								
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
 					<div class="row">
-						<div class="col-sm-6">
-							<div class="date-event">
-								<div class="day">12</div>
-								<div class="month">January</div>
-							</div>
-							<div class="item-event">
-								<h4>UPCOMING - Management Consulting<br/>
-									Worshop of January</h4>
-								<div class="item-event-content">
-									<div>Location: Saigon Cafe 52 Thành Thái, District 10, HCM</div>
-									<div>Date: Monday, 12th January, 2016</div>
-									<div>Time: From 9AM to 12AM</div>
-								</div>
-							</div>
-						</div>
-						<!-- /column -->
+						<?php query_posts( 'category_name=Event&posts_per_page=2' ); ?> 
+						<?php while ( have_posts() ) : the_post(); ?> 
 						
+						<?php
+							$date = get_field('start_date', false, false); 
+							$date = new DateTime($date); 
+						?> 
+						
+					
 						<div class="col-sm-6">
 							<div class="date-event">
-								<div class="day">15</div>
-								<div class="month">December</div>
+								<div class="day"><?php echo $date->format('d'); ?></div>
+								<div class="month"><?php echo $date->format('F'); ?></div>
 							</div>
 							<div class="item-event">
-								<h4>Personal Development and Family Consulting<br/>
-									First Promotional Workshop</h4>
+								<h4><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
 								<div class="item-event-content">
-									<div>Thank you to all participants on our first promotional workshop weekend! It was a great honour and lots of fun to work with you!</div>
+									<?php the_content(); ?>
 								</div>
 							</div>
 						</div>
 						<!-- /column -->
+						<?php endwhile; ?> 						
+						
 					</div>
 					<!-- /.row -->
 				</div>
