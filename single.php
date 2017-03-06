@@ -40,11 +40,12 @@ get_header(); ?>
 				
 				<div class="row article-body">
 				<div class="col-md-8">
-					<figure>
-					 <?php echo the_post_thumbnail( array(750, 400) ) ?>						 
-					</figure>
-					 <div class="divide30"></div>				
-						
+						<div style="display:none;">
+							<figure>
+								<?php echo the_post_thumbnail( array(750, 400) ) ?>						 
+							</figure>
+							<div class="divide30"></div>				
+						</div>
 						<div class="row ">
 							<div class="col-sm-2 col-md-2 ">
 								<div class="sticky">
