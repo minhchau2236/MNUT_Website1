@@ -271,7 +271,16 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
         }
 
 }
+	function get_custom_cat_template($single_template) {
+		global $post;
 	
+		if ( in_category( 'event' )) {
+			$single_template = dirname( __FILE__ ) . '/single-event.php';
+		}
+		return $single_template;
+	}
+	
+	add_filter( "single_template", "get_custom_cat_template" ) ;
 	
  
 	//Remove admin toolbar
