@@ -271,4 +271,9 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
         }
 
 }
+	
+	
+ 
+	//Remove admin toolbar
+	add_filter('show_admin_bar', '__return_false');
 ?>

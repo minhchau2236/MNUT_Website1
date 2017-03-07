@@ -2566,3 +2566,10 @@ strong.search-excerpt {
 }
 /* POST */
 .article-body--main img{max-width:100%;}
+
+/* ABOUT */
+.about-wrapper img.img-responsive{margin:0 auto;}
+
+/* read more */
+a.more-link{color:#1fb1bd;}
+a.more-link:hover{color:#fff;}

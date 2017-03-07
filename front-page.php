@@ -72,31 +72,42 @@
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
-					<div class="row">
-						<?php query_posts( 'category_name=Event&posts_per_page=2' ); ?> 
-						<?php while ( have_posts() ) : the_post(); ?> 
-						
-						<?php
-							$date = get_field('start_date', false, false); 
+					<div class="row">								
+						<?php  
+							// get posts 
+							$posts = get_posts(array( 
+							'category_name' => 'Event', 
+							'posts_per_page' => 2,
+							'meta_key'			=> 'eventPriority',
+							'orderby'			=> 'meta_value',
+							'order'				=> 'DESC',
+							));
+							if( $posts ): ?>
+							<?php foreach( $posts as $post ):  
+							setup_postdata( $post ) 
+							?>
+
+							<?php  
+							$date = get_field('eventStartDate', false, false); 
 							$date = new DateTime($date); 
-						?> 
-						
-					
-						<div class="col-sm-6">
-							<div class="date-event">
-								<div class="day"><?php echo $date->format('d'); ?></div>
-								<div class="month"><?php echo $date->format('F'); ?></div>
-							</div>
-							<div class="item-event">
-								<h4><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
-								<div class="item-event-content">
-									<?php the_content(); ?>
-								</div>
-							</div>
-						</div>
-						<!-- /column -->
-						<?php endwhile; ?> 						
-						
+							?> 
+							
+								<div class="col-sm-6">
+							 		<div class="date-event">
+							 			<div class="day"><?php echo $date->format('d'); ?></div>
+							 			<div class="month"><?php echo $date->format('F'); ?></div>
+							 		</div>
+							 		<div class="item-event">
+							 		<h4><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							 			<div class="item-event-content">
+							 				<?php the_content('Read more ...'); ?>
+							 			</div>
+							 		</div>
+							 	</div>
+
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?> 
+						<?php endif; ?>
 					</div>
 					<!-- /.row -->
 				</div>
@@ -169,8 +180,7 @@
 										<?php echo the_content('...'); ?>
 									</blockquote>
 									<div class="info">
-										<h5>
-											Le Dong Thao Vy</h5>									
+										<h5><?php the_field('testimonialsAuthor'); ?></h5>								
 									</div>
 								</div>
 								<!--/.quote --> 

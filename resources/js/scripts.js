@@ -54,6 +54,8 @@ $(document).ready(function() {
                 $(this).removeClass('fixed').addClass('default').fadeIn(0);
             });
         }
+		console.log('pos: ' + pos + ' :: scroll: ' + $(this).scrollTop());
+		
     });
     $('.offset').css('padding-top', $('.navbar').height() + 'px');
     $(window).resize(function() {
