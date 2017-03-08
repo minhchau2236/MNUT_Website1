@@ -29,21 +29,21 @@ get_header(); ?>
 			<!-- #page-header -->	
 
 	
-            <div class="container post">
+            <div class="container post event">
 				<div class="row">
 					<div class="col-md-8">
                         <?php  
 							$date = get_field('eventStartDate', false, false); 
 							$date = new DateTime($date); 
 					    ?> 
+						<div class="divide30"></div>
                         <div class="date-event">
                             <div class="day"><?php echo $date->format('d'); ?></div>
                             <div class="month"><?php echo $date->format('F'); ?></div>
                         </div>
                         <div class="item-event">
-                        <h4><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h4>
-                        </div>
-						<div class="divide20"></div>
+							<h1 class="text-header"><?php echo the_title(); ?></h1>
+                        </div>					
 					</div>
 				</div>
 				

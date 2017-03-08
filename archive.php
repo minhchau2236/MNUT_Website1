@@ -35,7 +35,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                 	while ( $my_query->have_posts() ) : $my_query->the_post();
                 ?>
 				<div class="col-sm-4">
-					<div class="blog-article">
+					<div class="blog-article style-1">
 						<div class="blog-article-thumbnail"> 
 							<a href="<?php  echo the_permalink(); ?>">
 									<?php echo the_post_thumbnail( array(360, 215) ) ?>									

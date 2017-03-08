@@ -27,7 +27,7 @@ function register_consultToSee_menus()
 /*---Add stylesheets---*/
 function consultToSee_scripts()
 {
-    wp_enqueue_style('consultToSee_style',get_stylesheet_uri());
+    //wp_enqueue_style('consultToSee_style',get_stylesheet_uri());
     wp_enqueue_style('consultToSee_google_fonts','https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700');
 	
 	$template_url = get_template_directory_uri();

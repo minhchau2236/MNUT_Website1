@@ -2111,7 +2111,7 @@ h1.text-header+.summary {
     margin-bottom: 50px;
 }
 
-.blog-article img {
+.blog-article.style-1 img {
     max-width: 100%;
     height: auto;
 	
@@ -2119,6 +2119,9 @@ h1.text-header+.summary {
     object-fit: cover;
     height: 215px;
     width: auto;
+}
+.blog-article.style-2 img {
+	max-width:100%;
 }
 
 .blog-article h4 a {
@@ -2573,3 +2576,12 @@ strong.search-excerpt {
 /* read more */
 a.more-link{color:#1fb1bd;}
 a.more-link:hover{color:#fff;}
+
+/* post date event */
+.post.event .text-header{
+	margin-top:10px;
+}
+.post.event .date-event{
+	color:#343434;
+}
+.post h4{color:inherit;}
