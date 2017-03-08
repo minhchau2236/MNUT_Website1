@@ -74,13 +74,21 @@
 					<div class="divide20"></div>
 					<div class="row">								
 						<?php  
+							$today = date('Ymd');
 							// get posts 
 							$posts = get_posts(array( 
-							'category_name' => 'Event', 
+							'category_name' => 'event', 
 							'posts_per_page' => 2,
-							'meta_key'			=> 'eventPriority',
+							'meta_query' => array(
+								array(
+									'key'		=> 'eventStartDate',
+									'compare'	=> '>=',
+									'value'		=> $today,
+								)
+							),
+							'meta_key'			=> 'eventStartDate',
 							'orderby'			=> 'meta_value',
-							'order'				=> 'DESC',
+							'order'				=> 'ASC',
 							));
 							if( $posts ): ?>
 							<?php foreach( $posts as $post ):  
