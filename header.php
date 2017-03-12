@@ -18,6 +18,8 @@
 	<meta name="theme-color" content="#ffffff">
     
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+	<script src="<?php bloginfo('template_url') ?>/vendors/js/jquery.min.js"></script>	
 	<?php wp_head(); ?>
   </head>
   <body <?php body_class(isset($class) ? $class : ''); ?> >	
@@ -30,8 +32,8 @@
 						<a class="dropdown-toggle"  data-toggle="dropdown">
 							Language: EN</a>
 						<ul class="dropdown-menu">
-							<li><a href="#"> EN </a></li>
-							<li><a href="#"> VN </a></li>
+							<li><a href="javascript:void(0)" onclick="doGTranslate('en|en');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"> EN </a></li>
+							<li><a href="javascript:void(0)" onclick="doGTranslate('en|vi');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"> VN </a></li>
 						</ul>
 					</div>  
 					<!-- /.language -->
