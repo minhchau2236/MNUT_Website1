@@ -39,7 +39,7 @@ function consultToSee_scripts()
 
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/vendors/js/bootstrap.min.js', array( 'jquery' ), null, true );
-	
+
 	wp_enqueue_script( 'plugins', $template_url . '/vendors/plugins.js', array( 'jquery' ), null, true );
 	wp_enqueue_script( 'scripts', $template_url . '/resources/js/scripts.js', array( 'jquery' ), null, true );	
 		

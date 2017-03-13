@@ -58,7 +58,7 @@ get_header(); ?>
 											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="link--anchor"><span class="fa fa-twitter"></span></a>
 										</li>
 										<li>
-											<a href="#" class="link--anchor"><span class="fa fa-pinterest-p"></span></a>
+											<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="link--anchor"><span class="fa fa-pinterest-p"></span></a>
 										</li>
 									</ul>
 								</div>
