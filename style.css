@@ -423,26 +423,29 @@ ul.top-social li a :hover {
 }
 
 .customSearch .input-group-addon {
-    color: #fff;
-    background-color: #1fb9c6;
-    border: 1px solid #1fb9c6;
-    padding: 10px 12px;
-    font-size: 20px;
-    display: table-cell;
+	color: #fff;
+	background-color: #1fb9c6;
+	border: 1px solid #ccc;
+	border-left:0;
+	padding: 0;
+	font-size: 20px; 
+	display:table-cell;
 }
-
-.customSearch .form-control:focus+.btn {
-    background: #28a9b4;
-    border: 1px solid #28a9b4;
+.customSearch .input-group-addon button{
+	padding:10px;
+	border:0;
+	background-color: #1fb9c6;
 }
-
-.customSearch .btn:active {
+.customSearch .form-control:focus + .btn {
+  background: #28a9b4;
+  border: 1px solid #28a9b4; }
+ .customSearch .btn:active {
     background-image: none;
     outline: 0;
-    -webkit-box-shadow: none;
+    -webkit-box-shadow:none ;
     box-shadow: none;
-    color: #28a9b4;
-}
+	color:#28a9b4;
+} 
 
 @media (max-width:991px) {
     #search {
@@ -828,17 +831,19 @@ ul.top-social li a :hover {
 
 .events {
     /*background: url('resources/images/bg.jpg') no-repeat;*/
-    background-repeat: n-repeat;
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     color: #fefefe;
     position: relative;
+	min-height:350px;
 }
 
 .events .section-title h3 {
     color: #fff;
 }
-
+.events .section-title h3 a{color:inherit;}
+.events .section-title h3 a:hover{color:#1fb1bd;}
 .date-event {
     width: 65px;
     float: left;
@@ -866,7 +871,8 @@ ul.top-social li a :hover {
 .item-event h4 {
     margin-bottom: 15px;
 }
-
+.item-event h4 a{color:inherit;}
+.item-event h4 a:hover{color:#1fb1bd;text-decoration:none;}
 .events .overlay {
     left: 0;
     top: 0;
@@ -995,6 +1001,10 @@ figure li a img {
 figure a img {
     display: inline;
     max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 215px;
+    width: auto;
 }
 
 
@@ -2104,6 +2114,11 @@ h1.text-header+.summary {
 .blog-article img {
     max-width: 100%;
     height: auto;
+	
+	 -o-object-fit: cover;
+    object-fit: cover;
+    height: 215px;
+    width: auto;
 }
 
 .blog-article h4 a {
@@ -2254,8 +2269,11 @@ ul.style-1 p {
 .post {
     line-height: 28px;
     color: #808080;
+	
 }
-
+.post .article-body{
+	min-height:500px;
+}
 figcaption {
     padding-top: 10px;
 }
@@ -2295,7 +2313,9 @@ figcaption {
     color: #35c0cc;
 }
 
-
+.article-body--main img {
+    max-width: 100%;
+}
 /* share social */
 
 .social-sharer li {
@@ -2544,3 +2564,12 @@ strong.search-excerpt {
     background-color: yellow;
     color: blue;
 }
+/* POST */
+.article-body--main img{max-width:100%;}
+
+/* ABOUT */
+.about-wrapper img.img-responsive{margin:0 auto;}
+
+/* read more */
+a.more-link{color:#1fb1bd;}
+a.more-link:hover{color:#fff;}

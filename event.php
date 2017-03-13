@@ -57,8 +57,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 						if (function_exists('custom_pagination')) {					
 							custom_pagination($my_query->max_num_pages,"",$paged);
 						}
-						?>
-							
+						?>					
 					<!-- /.pagination -->
 				</div>
 				<?php wp_reset_postdata(); ?>

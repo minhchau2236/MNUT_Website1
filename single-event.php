@@ -32,8 +32,17 @@ get_header(); ?>
             <div class="container post">
 				<div class="row">
 					<div class="col-md-8">
-				
-						<h1 class="text-header"> <?php the_title(); ?></h1>
+                        <?php  
+							$date = get_field('eventStartDate', false, false); 
+							$date = new DateTime($date); 
+					    ?> 
+                        <div class="date-event">
+                            <div class="day"><?php echo $date->format('d'); ?></div>
+                            <div class="month"><?php echo $date->format('F'); ?></div>
+                        </div>
+                        <div class="item-event">
+                        <h4><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h4>
+                        </div>
 						<div class="divide20"></div>
 					</div>
 				</div>
@@ -58,7 +67,7 @@ get_header(); ?>
 											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="link--anchor"><span class="fa fa-twitter"></span></a>
 										</li>
 										<li>
-											<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="link--anchor"><span class="fa fa-pinterest-p"></span></a>
+											<a href="#" class="link--anchor"><span class="fa fa-pinterest-p"></span></a>
 										</li>
 									</ul>
 								</div>
@@ -127,20 +136,6 @@ get_header(); ?>
 									
 							?>		
 							</ul>							
-
-						<!--<div class="header-style-2">Related news</div>
-						<div class="divide20"></div>
-						<ul class="style-1">
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Put the pieces together and overcome the differences in company values</a></li>
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Systemic Constellation in practice</a></li>
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Impression from the last promotional workshop with ConsulToSee</a></li>
-						</ul>-->
 					</div>
 				</div>
 			</div>

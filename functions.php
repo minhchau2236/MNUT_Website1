@@ -39,7 +39,7 @@ function consultToSee_scripts()
 
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/vendors/js/bootstrap.min.js', array( 'jquery' ), null, true );
-	
+
 	wp_enqueue_script( 'plugins', $template_url . '/vendors/plugins.js', array( 'jquery' ), null, true );
 	wp_enqueue_script( 'scripts', $template_url . '/resources/js/scripts.js', array( 'jquery' ), null, true );	
 		
@@ -271,4 +271,18 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
         }
 
 }
+	function get_custom_cat_template($single_template) {
+		global $post;
+	
+		if ( in_category( 'event' )) {
+			$single_template = dirname( __FILE__ ) . '/single-event.php';
+		}
+		return $single_template;
+	}
+	
+	add_filter( "single_template", "get_custom_cat_template" ) ;
+	
+ 
+	//Remove admin toolbar
+	add_filter('show_admin_bar', '__return_false');
 ?>

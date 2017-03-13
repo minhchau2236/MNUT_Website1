@@ -29,24 +29,33 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			
 			<div class="container">
 				<h1 class="text-header"><?php single_term_title() ?></h1>				
-				<div class="row column-3">
+				<div class="row column-2">
 				 <?php if ( $my_query->have_posts() ) : ?>
                 <?php
                 	while ( $my_query->have_posts() ) : $my_query->the_post();
+
+					$date = get_field('eventStartDate', false, false); 
+					$date = new DateTime($date); 
                 ?>
-				<div class="col-sm-4">
-					<div class="blog-article">
-						<div class="blog-article-thumbnail"> 
-							<a href="<?php  echo the_permalink(); ?>">
-									<?php echo the_post_thumbnail( array(360, 215) ) ?>									
-							</a>
-						</div>							
-						<div class="blog-article-details">
-							<h4><a href="<?php  echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
-							<p><?php echo wp_strip_all_tags(the_excerpt(), true ); ?></p>
+				<div class="col-sm-6">
+						<div class="blog-article style-2">
+							<div class="blog-article-thumbnail"> 
+								<a href="<?php  echo the_permalink(); ?>">
+								<?php echo the_post_thumbnail( array(570, 270) ) ?>	</a>
+							</div>	
+							<div class="blog-article-datetime">
+								<span class="day"> <?php echo $date->format('d'); ?></span>
+								<span class="month"><?php echo $date->format('F'); ?></span>
+							</div>
+							<div class="blog-article-details">
+								<h4><a href="<?php  echo the_permalink(); ?>"><?php echo the_title(); ?></a></h4>
+								<p><?php echo wp_strip_all_tags(the_excerpt(), true ); ?></p>
+							</div>
 						</div>
 					</div>
-				</div>
+
+
+				
                 <?php endwhile; ?>					
 				</div>
 				<!-- /.row -->
