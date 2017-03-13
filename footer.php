@@ -51,14 +51,15 @@
 	
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-	<script src="<?php bloginfo('template_url') ?>/vendors/js/jquery.min.js"></script>	
 	
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php bloginfo('template_url') ?>/vendors/js/bootstrap.min.js"></script>			
 	
+
 		<script src="<?php bloginfo('template_url') ?>/vendors/js/owl.carousel.min.js"></script>
 	<script src="<?php bloginfo('template_url') ?>/vendors/plugins.js"></script>	
 	<script src="<?php bloginfo('template_url') ?>/resources/js/scripts.js"></script>
+
 
 	<script>
 		(jQuery)(function ($) {			
