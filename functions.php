@@ -289,7 +289,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 	function get_custom_cat_template($single_template) {
 		global $post;
 	
-		if ( in_category( 'event' )) {
+		if ( in_category( 'events' ) || in_category( 'sukien')) {
 			$single_template = dirname( __FILE__ ) . '/single-event.php';
 		}
 		return $single_template;
@@ -356,7 +356,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			$output = '';
 			$output .= '<div class="dropdown language pull-right" role="group">
 		<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language:
-		  '.$args['title'].'		
+		  '.pll_current_language('name').'		
 		</a>
 		<ul class="dropdown-menu">';
 	 
