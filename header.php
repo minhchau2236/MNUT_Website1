@@ -28,9 +28,13 @@
             <div class="container">
               <div class="row">             
                 <div class="col-md-12 pull-right">
-                    <div class="dropdown language pull-right">                   
-                        <?php echo do_shortcode('[gtranslate]'); ?>                        
-                    </div>  
+                    
+                        <?php							
+                            if(is_active_sidebar('banner-la')){
+                                dynamic_sidebar('banner-la');			
+                            }
+                        ?>	                     
+                   
                     <!-- /.language -->
                     <ul class="top-social">
                         <li>Follow us on</li>

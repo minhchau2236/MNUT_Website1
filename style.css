@@ -2573,3 +2573,41 @@ strong.search-excerpt {
 /* read more */
 a.more-link{color:#1fb1bd;}
 a.more-link:hover{color:#fff;}
+
+/* polylang */
+.widget.widget_polylang{
+	display:inline-block;
+}
+.screen-reader-text{
+	display:none;
+}
+#lang_choice_polylang-9{
+	height:36px;
+	width:100px;
+	border:0;
+	background:transparent;	
+}
+
+option{
+    background:#fff;  
+    outline:none;
+    -webkit-box-shadow: 0 0 3px 1px #c00;
+    -moz-box-shadow: 0 0 3px 1px #c00;
+    box-shadow: 0 0 3px 1px #c00;
+	display: block;
+	
+    padding: 10px 20px;
+	height:20px;  
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+option:hover{
+	background:#1fb9c6; 
+}
+option:focus{
+    -webkit-box-shadow: 0 0 3px 1px #7cdaff;
+    -moz-box-shadow: 0 0 3px 1px #7cdaff;
+    box-shadow: 0 0 3px 1px #7cdaff;
+}
