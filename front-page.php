@@ -76,7 +76,7 @@
 						<?php  
 							// get posts 
 							$posts = get_posts(array( 
-							'category_name' => 'Event', 
+							'category_name' => 'Events', 
 							'posts_per_page' => 2,
 							'meta_key'			=> 'eventPriority',
 							'orderby'			=> 'meta_value',

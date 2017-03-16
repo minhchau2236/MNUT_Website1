@@ -28,7 +28,7 @@
             <div class="container">
               <div class="row">             
                 <div class="col-md-12 pull-right">
-                    
+                        <ul><?php pll_the_languages(); ?></ul>
                         <?php							
                             if(is_active_sidebar('banner-la')){
                                 dynamic_sidebar('banner-la');			
