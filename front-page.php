@@ -136,7 +136,7 @@
 							?>	
 							<div class="post col-sm-4">
 								<figure>
-									<a href="<?php echo the_permalink(); ?>">							   
+									<a href="<?php echo the_permalink(); ?>">
 										<?php the_post_thumbnail( array(360, 215) ) ?>																			
 									</a>
 								</figure>
