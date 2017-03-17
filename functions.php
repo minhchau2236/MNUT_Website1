@@ -25,9 +25,7 @@ function register_consultToSee_menus()
 
 
 /*---Add stylesheets---*/
-function consultToSee_scripts()
-{
-    wp_enqueue_style('consultToSee_style',get_stylesheet_uri());
+function consultToSee_scripts(){   
     wp_enqueue_style('consultToSee_google_fonts','https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700');
 	
 	$template_url = get_template_directory_uri();
@@ -127,25 +125,11 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the banner',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
-	/**
-	@ thiết lập hiển thị language witcher
-	@ 
-	**/
-	register_sidebar(
-		array(
-			'name' => 'homepage - language',
-			'id'   => 'banner-la',
-			'description'=> 'Appears in the banner',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
-			'after_title' =>'</h4>',
-		)
-	);
+	
 	/**
 	@ thiết lập hiển thị service
 	@ 
@@ -157,7 +141,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the home page service part',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
@@ -172,7 +156,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the home page service part',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
@@ -187,7 +171,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the block',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
@@ -354,8 +338,8 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 		function my_dropdown($output, $args) {
 			$translations = pll_the_languages(array('raw'=>1));
 			$output = '';
-			$output .= '<div class="dropdown language pull-right" role="group">
-		<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language:
+			$output .= '<div class="dropdown language pull-right" role="group">Language:
+		<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
 		  '.pll_current_language('name').'		
 		</a>
 		<ul class="dropdown-menu">';
