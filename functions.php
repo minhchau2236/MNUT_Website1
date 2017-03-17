@@ -352,4 +352,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			return $output;
 		}
 	}
+
+	/** Language string setting*/
+    require_once 'languageTranslate.php';
 ?>
