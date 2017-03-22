@@ -300,8 +300,13 @@ ul.top-social li a :hover {
     border: medium none;
     border-radius: 0;
     min-width: 90px;
-    font-size: 13px;
-    text-align: center;
+    font-size: 13px;   
+}
+.language .dropdown-menu>li>a{
+	padding:7px 20px;
+}
+.language img{
+	margin-right:5px;
 }
 
 
@@ -2109,16 +2114,23 @@ h1.text-header+.summary {
 
 .blog-article {
     margin-bottom: 50px;
+	width:100%;
+	float:left;
 }
 
 .blog-article img {
     max-width: 100%;
-    height: auto;
-	
 	 -o-object-fit: cover;
     object-fit: cover;
     height: 215px;
     width: auto;
+}
+.style-2.blog-article img {
+    max-width: 100%;    
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 270px;
+    width: 100%;
 }
 
 .blog-article h4 a {
@@ -2423,7 +2435,7 @@ figcaption {
     font-size: 16px;
     font-weight: 400;
     color: grey;
-    text-transform: uppercase;
+    text-transform: uppercase;	
 }
 
 .contactForm .singeContact {
@@ -2565,7 +2577,7 @@ strong.search-excerpt {
     color: blue;
 }
 /* POST */
-.article-body--main img{max-width:100%;}
+.article-body--main img{max-width:100%;height:auto;}
 
 /* ABOUT */
 .about-wrapper img.img-responsive{margin:0 auto;}
@@ -2573,3 +2585,73 @@ strong.search-excerpt {
 /* read more */
 a.more-link{color:#1fb1bd;}
 a.more-link:hover{color:#fff;}
+
+/* contactForm 7 */
+.contactForm label{width:100%;}
+.contactForm label input{min-height:50px;margin-top:10px;}
+.contactForm textarea {margin-top:10px;}
+
+.wpcf7-form-control{
+	display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;   
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.wpcf7-form-control.wpcf7-submit{
+	border: 1px solid #35c0cc;
+	font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    width: 250px;
+	padding: 13px 22px;
+    min-width: 200px;
+	border-radius: 30px;
+	color: #fff;
+    background: #25b7d3;
+	margin: 20px auto;    
+	font-weight: 700;   
+    text-shadow: none;
+    text-transform: none;
+    transition: all 150ms ease-in;
+    box-shadow: none;
+    text-transform: uppercase;
+    display: block;
+	min-height:52px;
+}
+.wpcf7-form-control.wpcf7-submit:hover{
+	background: none;
+    color: #35c0cc;
+}
+.wpcf7-not-valid-tip{
+	text-transform:none;
+	font-style:italic;
+	margin-top:10px;
+	font-size:15px!important;
+	text-align:right;
+	color: #35c0cc!important;
+}
+div.wpcf7-validation-errors{
+	background-color: #ecff81;
+	border:0;
+	text-align:center;
+	padding:15px;
+}
+/* post event*/
+.post.event h1.text-header {
+	margin-top:10px;
+}
+
+.post iframe {
+	max-width:100%;
+}

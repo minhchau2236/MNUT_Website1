@@ -28,13 +28,12 @@
             <div class="container">
               <div class="row">             
                 <div class="col-md-12 pull-right">
-                    <div class="dropdown language pull-right">                   
-                        <?php echo do_shortcode('[gtranslate]'); ?>                        
-                    </div>  
+                    <?php pll_the_languages(); ?>                                          
+                   
                     <!-- /.language -->
                     <ul class="top-social">
                         <li>Follow us on</li>
-                        <li><a href="#"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a href="https://www.facebook.com/consultosee/"><i class="mdi mdi-facebook-box"></i></a></li>
                         <li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
                         <li><a href="#"><i class="mdi mdi-youtube-play"></i></a></li>       
                         <li><a href="javascript:void(0)"><img src="<?php bloginfo('template_url') ?>/resources/images/line.png"/></a></li>

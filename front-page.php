@@ -68,7 +68,7 @@
 							// Get the URL of this category
 							$category_link = get_category_link( $category_id );
 						?>
-						<h3><a href="<?php echo esc_url( $category_link ); ?>">Our events</a></h3>								
+						<h3><a href="<?php echo esc_url( $category_link ); ?>"><?php echo pll_e('our events'); ?></a></h3>								
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
@@ -76,7 +76,7 @@
 						<?php  
 							// get posts 
 							$posts = get_posts(array( 
-							'category_name' => 'Event', 
+							'category_name' => 'Events', 
 							'posts_per_page' => 2,
 							'meta_key'			=> 'eventPriority',
 							'orderby'			=> 'meta_value',
@@ -119,7 +119,7 @@
 			<div class="width-common">
 				<div class="container inner">
 					<div class="section-title">
-						<h3>Recent news</h3>								
+						<h3><?php echo pll_e('recent news'); ?></h3>								
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
@@ -136,7 +136,7 @@
 							?>	
 							<div class="post col-sm-4">
 								<figure>
-									<a href="<?php echo the_permalink(); ?>">							   
+									<a href="<?php echo the_permalink(); ?>">
 										<?php the_post_thumbnail( array(360, 215) ) ?>																			
 									</a>
 								</figure>
@@ -158,7 +158,7 @@
 			<div class="width-common">
 				<div class="container inner">
 					<div class="section-title">
-						<h3>Testimonials</h3>						
+						<h3><?php echo pll_e('testimonials'); ?></h3>						
 					</div>
 					<div class="divide20"></div>
 					<div class="carousel-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">

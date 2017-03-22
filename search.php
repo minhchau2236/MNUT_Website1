@@ -3,9 +3,8 @@
 	<div id="page-header">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href="<?php echo get_home_url(); ?>">Home</a></li>
-				<li><a href="#">News</a></li>						
-				<li class="active">search result</li>
+				<li><a href="<?php echo get_home_url(); ?>"><?php echo pll_e('Home'); ?></a></li>					
+				<li class="active"><?php echo pll_e('search result'); ?></li>
 			</ul>
 		</div>
 	</div>
@@ -23,13 +22,12 @@ if ( $the_query->have_posts() ) {
 				<div class="divide50"></div>
 				<div class="notification">
 					<p>
-						<span class="text text-bolder">search result :</span>
+						<span class="text text-bolder"><?php echo pll_e('search result'); ?> :</span>
 						<span class="text text-italic"><?php echo get_query_var('s')?></span>
 					</p>
-					<p class="text-result">We have found: <?php echo $the_query->post_count; ?> results</p>
+					<p class="text-result"><?php echo pll_e('We have found'); ?>: <?php echo $the_query->post_count; ?> <?php echo pll_e('results'); ?></p>
 				</div>
-				<!-- /.notification -->
-				
+				<!-- /.notification -->	 			
 				<div class="divide10"></div>
 				<div class="list-result">
 		<?php        
@@ -49,10 +47,10 @@ if ( $the_query->have_posts() ) {
     }else{
 ?>
 		<div class="notification">
-			<p><span class="text text-bolder">Nothing Found</span></p>
+			<p><span class="text text-bolder"><?php echo pll_e('Nothing Found'); ?></span></p>
 		</div>
         <div class="alert alert-info">
-          <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+          <p><?php echo pll_e('Sorry, but nothing matched your search criteria. Please try again with some different keywords'); ?>.</p>
         </div>
 	
 <?php } ?>

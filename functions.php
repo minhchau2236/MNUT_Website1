@@ -25,9 +25,7 @@ function register_consultToSee_menus()
 
 
 /*---Add stylesheets---*/
-function consultToSee_scripts()
-{
-    wp_enqueue_style('consultToSee_style',get_stylesheet_uri());
+function consultToSee_scripts(){   
     wp_enqueue_style('consultToSee_google_fonts','https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700');
 	
 	$template_url = get_template_directory_uri();
@@ -127,11 +125,12 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the banner',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
-		/**
+	
+	/**
 	@ thiết lập hiển thị service
 	@ 
 	**/
@@ -142,7 +141,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the home page service part',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
@@ -157,7 +156,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the home page service part',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
@@ -172,7 +171,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the block',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h4 class="widget-title">',
+			'before_title' => '<h4 class="hidden  widget-title">',
 			'after_title' =>'</h4>',
 		)
 	);
@@ -274,7 +273,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 	function get_custom_cat_template($single_template) {
 		global $post;
 	
-		if ( in_category( 'event' )) {
+		if ( in_category( 'events' ) || in_category( 'sukien')) {
 			$single_template = dirname( __FILE__ ) . '/single-event.php';
 		}
 		return $single_template;
@@ -285,4 +284,75 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
  
 	//Remove admin toolbar
 	add_filter('show_admin_bar', '__return_false');
+	
+	/**
+	* Tự động cập nhật ảnh đại diện
+	**/
+	/*
+	function auto_featured_thumb(){
+		global $post ;
+					
+		$has_thumb = has_post_thumbnail($post->ID);
+
+		if (!$has_thumb){
+			$attached_image = get_children('post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1');
+
+			if ($attached_image){
+				foreach ($attached_image as $attachment_id => $attachment) {
+					set_post_thumbnail($post->ID,$attachment_id);
+				}
+			}
+		}
+				
+	}
+	add_action ( 'the_post' , 'auto_featured_thumb' );
+	add_action ( 'save_post' , 'auto_featured_thumb' );
+	add_action ( 'draft_to_publish' , 'auto_featured_thumb' );
+	add_action ( 'new_to_publish' , 'auto_featured_thumb' );
+	add_action ( 'pending_to_publish' , 'auto_featured_thumb' );
+	add_action ( 'future_to_publish' , 'auto_featured_thumb' );
+	*/
+	
+	/**
+	* Auto Set Default Post Image
+	**/
+	
+	add_filter( 'post_thumbnail_html', 'wpsites_default_post_image' );
+
+	function wpsites_default_post_image( $html ) {
+		if ( empty( $html ) )
+			$html = '<img src="' . trailingslashit( get_stylesheet_directory_uri() ) . 'resources/images/ConsulToSee_image_default.jpg' . '" alt="enter your alt text here" />';
+
+		return $html;
+	}
+		
+	/**
+	* Customization Polylang
+	**/
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+ 
+	// check if polylang exist & enabled
+	if ( is_plugin_active( 'polylang/polylang.php' ) ) {
+		//plugin is activated
+		add_filter('pll_the_languages', 'my_dropdown', 10, 2);
+		function my_dropdown($output, $args) {
+			$translations = pll_the_languages(array('raw'=>1));
+			$output = '';
+			$output .= '<div class="dropdown language pull-right" role="group">Language:
+		<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+		  '.pll_current_language('name').'		
+		</a>
+		<ul class="dropdown-menu">';
+	 
+			foreach ($translations as $key => $value) {
+				$output .= '<li><a href="'.$value['url'].'"><img src="'.$value['flag'].'" alt="'.$value['slug'].'"> ' .$value['name'].'</a></li>';
+			}
+	 
+			$output .= '</ul></div>';
+			return $output;
+		}
+	}
+
+	/** Language string setting*/
+    require_once 'languageTranslate.php';
 ?>
