@@ -321,7 +321,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 
 	function wpsites_default_post_image( $html ) {
 		if ( empty( $html ) )
-			$html = '<img src="' . trailingslashit( get_stylesheet_directory_uri() ) . 'resources/images/default-image.png' . '" alt="enter your alt text here" />';
+			$html = '<img src="' . trailingslashit( get_stylesheet_directory_uri() ) . 'resources/images/ConsulToSee_image_default.jpg' . '" alt="enter your alt text here" />';
 
 		return $html;
 	}

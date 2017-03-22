@@ -37,7 +37,7 @@
 			  
 			  <div class="sub-footer">
 				<div class="container">
-				  <p class="text-center">© Copyright 2016 ConsulToSee. All Rights Reserved.</p>
+				  <p class="text-center">Copyright © 2017 ConsulToSee. All Rights Reserved.</p>
 				</div>
 				<!-- .container --> 
 			  </div>

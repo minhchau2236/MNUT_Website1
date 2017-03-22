@@ -195,7 +195,7 @@ $(document).ready(function() {
 	/*-----------------------------------------------------------------------------------*/
     
     $('.testimonials.col1').owlCarousel({
-	    autoplay: true,
+	    autoplay: false,
 		autoplayTimeout: 10000,
 		loop: true,
 		margin: 30,
