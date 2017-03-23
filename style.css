@@ -2656,3 +2656,7 @@ div.wpcf7-validation-errors{
 .post iframe {
 	max-width:100%;
 }
+.post.topic-event .date-event{
+	color:#606060;
+	margin-top:25px;
+}

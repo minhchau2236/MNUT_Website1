@@ -29,7 +29,7 @@ get_header(); ?>
 			<!-- #page-header -->	
 
 	
-            <div class="container post">
+            <div class="container post topic-event">
 				<div class="row">
 					<div class="col-md-8">
                         <?php  
@@ -41,7 +41,7 @@ get_header(); ?>
                             <div class="month"><?php echo $date->format('F'); ?></div>
                         </div>
                         <div class="item-event">
-                        <h4><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h4>
+                        <h1 class="text-header"><?php echo the_title(); ?></h1>
                         </div>
 						<div class="divide20"></div>
 					</div>

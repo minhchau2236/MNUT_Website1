@@ -99,7 +99,7 @@
 							 		<div class="item-event">
 							 		<h4><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							 			<div class="item-event-content">
-							 				<?php the_content('Read more ...'); ?>
+							 				<?php echo the_excerpt(); ?>
 							 			</div>
 							 		</div>
 							 	</div>

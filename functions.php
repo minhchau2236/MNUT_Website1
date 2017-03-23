@@ -186,7 +186,7 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'description'=> 'Appears in the footer area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
+			'before_title' => '<h3 class="hidden widget-title">',
 			'after_title' =>'</h3>',
 		)
 	);
