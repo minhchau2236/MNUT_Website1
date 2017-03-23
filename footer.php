@@ -5,7 +5,7 @@
 <footer class="footer width-common">
 			<div class="container inner">
 				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-sm-4">
 						<?php
 							if(is_active_sidebar('footer-1')){
 								dynamic_sidebar('footer-1');
@@ -13,7 +13,7 @@
 						?>	
 					</div>
 					<!-- /column --> 
-					<div class="col-sm-3">
+					<div class="col-sm-4">
 						<?php
 							if(is_active_sidebar('footer-2')){
 								dynamic_sidebar('footer-2');

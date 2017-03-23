@@ -9,6 +9,7 @@
 		</div>
 	</div>
 	<!-- #page-header -->
+	<div class="container search">
 <?php
 	$s=get_search_query();
 	$args = array(
@@ -18,7 +19,7 @@
 	$the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 		?>
-		<div class="container search">
+		
 				<div class="divide50"></div>
 				<div class="notification">
 					<p>
@@ -45,7 +46,7 @@ if ( $the_query->have_posts() ) {
 		</div><!--/.list-result -->
 		<?php
     }else{
-?>
+?>		<div class="divide50"></div>
 		<div class="notification">
 			<p><span class="text text-bolder"><?php echo pll_e('Nothing Found'); ?></span></p>
 		</div>

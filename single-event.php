@@ -9,7 +9,7 @@ get_header(); ?>
 			<div id="page-header">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="/">Home</a></li>
+						<li><a href="/"><?php echo pll_e('Home'); ?></a></li>
 						<?php 
 								$post_categories = get_the_category();
 
@@ -58,7 +58,7 @@ get_header(); ?>
 						<div class="row ">
 							<div class="col-sm-2 col-md-2 ">
 								<div class="sticky">
-									<span>SHARE</span>
+									<span><?php echo pll_e('SHARE'); ?></span>
 									<ul class="social-sharer">
 										<li>
 											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook." class="link--anchor"><span class="fa fa-facebook"></span></a>
@@ -84,7 +84,7 @@ get_header(); ?>
 					<!-- /column left -->
 					<div class="col-md-4">
 						
-						<div class="header-style-2">Related news</div>
+						<div class="header-style-2"><?php echo pll_e('Related news'); ?></div>
 						<div class="divide20"></div>
 						<ul class="style-1">
 						<?php

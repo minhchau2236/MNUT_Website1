@@ -126,21 +126,8 @@ get_header(); ?>
 								wp_reset_query();
 									
 							?>		
-							</ul>							
-
-						<!--<div class="header-style-2">Related news</div>
-						<div class="divide20"></div>
-						<ul class="style-1">
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Put the pieces together and overcome the differences in company values</a></li>
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Systemic Constellation in practice</a></li>
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Impression from the last promotional workshop with ConsulToSee</a></li>
-						</ul>-->
+							</ul>	
+						
 					</div>
 				</div>
 			</div>
