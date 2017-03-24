@@ -43,7 +43,8 @@ figure {
 }
 
 figure img {
-    max-width: 100%
+    max-width: 100%;
+	height:auto;
 }
 
 iframe {
@@ -192,8 +193,9 @@ h4 {
 }
 
 .btn.btn-transparent:hover {
-    color: #939598;
-    border-color: #939598;
+    background-color: #25b7d3;
+    border-color: #25b7d3;
+	color:#fff;
 }
 
 .btn.btn-square {
@@ -2674,10 +2676,11 @@ div.wpcf7-validation-errors{
     font-style: italic;
     line-height: 30px;
 }
-.blog-article.style-3 blockquote a:hover{	
+.blog-article.style-3 blockquote a:hover,.testimonials.col1 blockquote a:hover{	
 	text-decoration:none;
 }
-.blog-article.style-3 blockquote a:hover p{color:#35c0cc;}
+.testimonials.col1 blockquote a{color:inherit;}
+.blog-article.style-3 blockquote a:hover p,.testimonials.col1 blockquote a:hover p{color:#35c0cc;}
 .blog-article.style-3 blockquote p{font-size:20px;line-height:30px;color: #606060;}
 .blog-article.style-3 blockquote:before {	
 	font-family: Arial;
@@ -2698,3 +2701,6 @@ div.wpcf7-validation-errors{
     padding-left: 50px;
 	color: #343434;
 }
+/* post ul */
+.article-body--main ul{list-style:initial;padding-left:40px;}
+.article-body--main h4{color:inherit;}

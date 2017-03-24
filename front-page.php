@@ -185,7 +185,7 @@
 							<div class="item">								
 								<div class="quote">
 									<blockquote>
-										<?php echo the_content('...'); ?>
+										<a href="<?php echo the_permalink();?>"><?php echo the_excerpt(); ?></a>
 									</blockquote>
 									<div class="info">
 										<h5><?php the_field('testimonialsAuthor'); ?></h5>								
