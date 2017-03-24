@@ -8,7 +8,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
   $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 9,
+      'posts_per_page' => 8,
       'paged' => $paged,
 	  'category_name'   => $category_slug,
 	  'meta_query'	=> array(

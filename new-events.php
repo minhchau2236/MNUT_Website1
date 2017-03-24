@@ -8,7 +8,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
   $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 9,
+      'posts_per_page' => 8,
       'paged' => $paged,
 	  'category_name'   => $category_slug,
 	  'meta_query'	=> array(
@@ -21,8 +21,8 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			)		
 		),
 		'orderby' => array( 
-			'eventStartDate' => 'DESC'
-		),
+			'eventStartDate' => 'ASC'
+		)
     );
 	$my_query = new WP_Query( $args ); 
 ?>
@@ -83,7 +83,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				</div>
 				<?php wp_reset_postdata(); ?>
 				 <?php else:  ?>
-					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+					<p><?php _e( 'Sorry, no new event found.' ); ?></p>
 				<?php endif; ?>
 
 			</div>

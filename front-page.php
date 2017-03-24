@@ -76,13 +76,68 @@
 						<?php  
 							// get posts 
 							$posts = get_posts(array( 
-							'category_name' => 'Events', 
-							'posts_per_page' => 2,
-							'meta_key'			=> 'eventPriority',
-							'orderby'			=> 'meta_value',
-							'order'				=> 'DESC',
+								'category_name' => 'Events', 
+								'posts_per_page' => 2,
+								'order'				=> 'DESC',
+								'meta_query'	=> array(
+										'relation'		=> 'AND',
+										array(
+											'key'	 	=> 'eventStartDate',
+											'value'	  	=>  date("Ymd"),
+											'compare' 	=> '>=',
+											'type' => 'DATE' 
+										)		
+								 ),
+								'orderby' => array( 
+									'eventStartDate' => 'ASC'
+								)
 							));
-							if( $posts ): ?>
+
+							if(sizeof($posts) == 0)
+							{
+								$posts = get_posts(array( 
+									'category_name' => 'Events', 
+									'posts_per_page' => 2,
+									'order'				=> 'DESC',
+									'meta_query'	=> array(
+											'relation'		=> 'AND',
+											array(
+												'key'	 	=> 'eventStartDate',
+												'value'	  	=>  date("Ymd"),
+												'compare' 	=> '<',
+												'type' => 'DATE' 
+											)		
+									),
+									'orderby' => array( 
+										'eventStartDate' => 'DESC'
+									)
+								));
+							}
+
+							if(sizeof($posts) == 1)
+							{
+								$posts = array_merge($posts, get_posts(array( 
+									'category_name' => 'Events', 
+									'posts_per_page' => 1,
+									'order'				=> 'DESC',
+									'meta_query'	=> array(
+											'relation'		=> 'AND',
+											array(
+												'key'	 	=> 'eventStartDate',
+												'value'	  	=>  date("Ymd"),
+												'compare' 	=> '<',
+												'type' => 'DATE' 
+											)		
+									),
+									'orderby' => array( 
+										'eventStartDate' => 'DESC'
+									)
+								)));
+							}
+
+							if( $posts ):
+							?>
+							
 							<?php foreach( $posts as $post ):  
 							setup_postdata( $post ) 
 							?>
