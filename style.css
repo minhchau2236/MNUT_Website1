@@ -2655,3 +2655,46 @@ div.wpcf7-validation-errors{
 .post iframe {
 	max-width:100%;
 }
+.post.topic-event .date-event{
+	color:#606060;
+	margin-top:25px;
+}
+
+/* page index */
+.decription p,.txt-slogan-descript p{color:#808080;}
+
+/* topic testimonials */
+.blog-article.style-3 blockquote {
+    padding-left: 50px;
+    padding-right: 30px;
+    position: relative;
+    color: #606060;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 30px;
+}
+.blog-article.style-3 blockquote a:hover{	
+	text-decoration:none;
+}
+.blog-article.style-3 blockquote a:hover p{color:#35c0cc;}
+.blog-article.style-3 blockquote p{font-size:20px;line-height:30px;color: #606060;}
+.blog-article.style-3 blockquote:before {	
+	font-family: Arial;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -10px;    
+    left: 0;
+    content:"“";
+	font-style: normal;
+}
+.blog-article.style-3 blockquote:before {
+   color: #20bac6;
+    font-size:90px;
+	line-height: 90px;
+}
+.blog-article.style-3 .info {
+    padding-left: 50px;
+	color: #343434;
+}
