@@ -129,6 +129,22 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 			'after_title' =>'</h4>',
 		)
 	);
+
+	/**
+	@ thiết lập hiển thị language
+	@ 
+	**/
+	register_sidebar(
+		array(
+			'name' => 'homepage - language',
+			'id'   => 'language',
+			'description'=> 'Appears in the header language',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h4 class="hidden  widget-title">',
+			'after_title' =>'</h4>',
+		)
+	);
 	
 	/**
 	@ thiết lập hiển thị service
