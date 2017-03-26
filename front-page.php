@@ -76,13 +76,68 @@
 						<?php  
 							// get posts 
 							$posts = get_posts(array( 
-							'category_name' => 'Events', 
-							'posts_per_page' => 2,
-							'meta_key'			=> 'eventPriority',
-							'orderby'			=> 'meta_value',
-							'order'				=> 'DESC',
+								'category_name' => 'Events', 
+								'posts_per_page' => 2,
+								'order'				=> 'DESC',
+								'meta_query'	=> array(
+										'relation'		=> 'AND',
+										array(
+											'key'	 	=> 'eventStartDate',
+											'value'	  	=>  date("Ymd"),
+											'compare' 	=> '>=',
+											'type' => 'DATE' 
+										)		
+								 ),
+								'orderby' => array( 
+									'eventStartDate' => 'ASC'
+								)
 							));
-							if( $posts ): ?>
+
+							if(sizeof($posts) == 0)
+							{
+								$posts = get_posts(array( 
+									'category_name' => 'Events', 
+									'posts_per_page' => 2,
+									'order'				=> 'DESC',
+									'meta_query'	=> array(
+											'relation'		=> 'AND',
+											array(
+												'key'	 	=> 'eventStartDate',
+												'value'	  	=>  date("Ymd"),
+												'compare' 	=> '<',
+												'type' => 'DATE' 
+											)		
+									),
+									'orderby' => array( 
+										'eventStartDate' => 'DESC'
+									)
+								));
+							}
+
+							if(sizeof($posts) == 1)
+							{
+								$posts = array_merge($posts, get_posts(array( 
+									'category_name' => 'Events', 
+									'posts_per_page' => 1,
+									'order'				=> 'DESC',
+									'meta_query'	=> array(
+											'relation'		=> 'AND',
+											array(
+												'key'	 	=> 'eventStartDate',
+												'value'	  	=>  date("Ymd"),
+												'compare' 	=> '<',
+												'type' => 'DATE' 
+											)		
+									),
+									'orderby' => array( 
+										'eventStartDate' => 'DESC'
+									)
+								)));
+							}
+
+							if( $posts ):
+							?>
+							
 							<?php foreach( $posts as $post ):  
 							setup_postdata( $post ) 
 							?>
@@ -100,7 +155,7 @@
 							 		<div class="item-event">
 							 		<h4><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							 			<div class="item-event-content">
-							 				<?php the_content('Read more ...'); ?>
+							 				<?php echo the_excerpt(); ?>
 							 			</div>
 							 		</div>
 							 	</div>
@@ -158,7 +213,15 @@
 			<div class="width-common">
 				<div class="container inner">
 					<div class="section-title">
-						<h3><?php echo pll_e('testimonials'); ?></h3>						
+						<?php
+							// Get the ID of a given category
+							$category_id = get_cat_ID( 'TESTIMONIALS' );
+
+							// Get the URL of this category
+							$category_link = get_category_link( $category_id );
+						?>
+						<h3><a href="<?php echo esc_url( $category_link ); ?>"><?php echo pll_e('testimonials'); ?></a></h3>				
+											
 					</div>
 					<div class="divide20"></div>
 					<div class="carousel-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
@@ -166,7 +229,7 @@
 						<?php
 									$the_testimonials_query = new WP_Query(array(
 										'post_type' => 'post',
-										'posts_per_page' => 2,
+										'posts_per_page' => 3,
 										'category_name' => 'testimonials', // this is the category SLUG
 									));
 								?>		
@@ -177,7 +240,7 @@
 							<div class="item">								
 								<div class="quote">
 									<blockquote>
-										<?php echo the_content('...'); ?>
+										<a href="<?php echo the_permalink();?>"><?php echo the_excerpt(); ?></a>
 									</blockquote>
 									<div class="info">
 										<h5><?php the_field('testimonialsAuthor'); ?></h5>								

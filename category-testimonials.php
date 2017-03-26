@@ -11,10 +11,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       'post_type' => 'post',
       'posts_per_page' => 8,
       'paged' => $paged,
-	  'category_name'   => $category_slug,
-		'orderby' => array( 
-			'eventStartDate' => 'DESC'
-		)
+	  'category_name'   => $category_slug
     );
 	$my_query = new WP_Query( $args ); 
 ?>
@@ -35,30 +32,22 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				<div class="row column-2">
 				 <?php if ( $my_query->have_posts() ) : ?>
                 <?php
-                	while ( $my_query->have_posts() ) : $my_query->the_post();
-
-					$date = get_field('eventStartDate', false, false); 
-					$date = new DateTime($date); 
+                	while ( $my_query->have_posts() ) : $my_query->the_post();				
                 ?>
 				<div class="col-sm-6">
-						<div class="blog-article style-2">
-							<div class="blog-article-thumbnail"> 
-								<a href="<?php  echo the_permalink(); ?>">
-								<?php echo the_post_thumbnail( array(570, 270) ) ?>	</a>
-							</div>	
-							<div class="blog-article-datetime">
-								<span class="day"> <?php echo $date->format('d'); ?></span>
-								<span class="month"><?php echo $date->format('F'); ?></span>
-							</div>
-							<div class="blog-article-details">
-								<h4><a href="<?php  echo the_permalink(); ?>"><?php echo the_title(); ?></a></h4>
-								<p><?php echo wp_strip_all_tags(the_excerpt(), true ); ?></p>
+						<div class="blog-article style-3">							
+							<div class="blog-article-details">							
+								<div class="quote">
+									<blockquote>										 
+										<a href="<?php  echo the_permalink(); ?>"><?php echo wp_strip_all_tags(the_excerpt(), true ); ?></a>										
+									</blockquote>
+									<div class="info">
+										<h5><?php the_field('testimonialsAuthor'); ?></h5>									
+									</div>
+								</div>								
 							</div>
 						</div>
-					</div>
-
-
-				
+					</div>				
                 <?php endwhile; ?>					
 				</div>
 				<!-- /.row -->

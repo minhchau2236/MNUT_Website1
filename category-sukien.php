@@ -7,11 +7,14 @@ $categories = get_the_category();
 $category_slug = $categories[0]->slug ;
 $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-  $args = array(
+   $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 9,
+      'posts_per_page' => 8,
       'paged' => $paged,
-	  'category_name'   => $category_slug
+	  'category_name'   => $category_slug,
+		'orderby' => array( 
+			'eventStartDate' => 'DESC'
+		)
     );
 	$my_query = new WP_Query( $args ); 
 ?>

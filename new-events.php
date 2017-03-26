@@ -1,10 +1,9 @@
 <?php
-    /*Front page template file*/   
+    /* Template Name: new-events*/   
     get_header();
 ?>
 <?php
-$categories = get_the_category();
-$category_slug = $categories[0]->slug ;
+$category_slug = 'events' ;
 $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
   $args = array(
@@ -12,8 +11,17 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       'posts_per_page' => 8,
       'paged' => $paged,
 	  'category_name'   => $category_slug,
+	  'meta_query'	=> array(
+			'relation'		=> 'AND',
+			array(
+				'key'	 	=> 'eventStartDate',
+				'value'	  	=>  date("Ymd"),
+				'compare' 	=> '>=',
+				'type' => 'DATE' 
+			)		
+		),
 		'orderby' => array( 
-			'eventStartDate' => 'DESC'
+			'eventStartDate' => 'ASC'
 		)
     );
 	$my_query = new WP_Query( $args ); 
@@ -24,14 +32,14 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				<div class="container">
 					<ul class="breadcrumb">
 						<li><a href="/">Home</a></li>						
-						<li class="active"><?php single_term_title() ?></li>
+						<li class="active">New events</li>
 					</ul>
 				</div>
 			</div>
 			<!-- #page-header -->
 			
 			<div class="container">
-				<h1 class="text-header"><?php single_term_title() ?></h1>				
+				<h1 class="text-header">New events</h1>				
 				<div class="row column-2">
 				 <?php if ( $my_query->have_posts() ) : ?>
                 <?php
@@ -75,7 +83,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				</div>
 				<?php wp_reset_postdata(); ?>
 				 <?php else:  ?>
-					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+					<p><?php _e( 'Sorry, no new event found.' ); ?></p>
 				<?php endif; ?>
 
 			</div>
