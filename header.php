@@ -28,8 +28,13 @@
             <div class="container">
               <div class="row">             
                 <div class="col-md-12 pull-right">
-                    <?php pll_the_languages(); ?>                                          
-                   
+                    <?php							
+                        if(is_active_sidebar('language') && is_home()){
+                            dynamic_sidebar('language');			
+                        }
+                    ?>	
+                    <!--<?php pll_the_languages(); ?>                                          
+                   -->
                     <!-- /.language -->
                     <ul class="top-social">
                         <li>Follow us on</li>
