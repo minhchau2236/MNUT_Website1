@@ -52,13 +52,13 @@ get_header(); ?>
 									<span><?php echo pll_e('SHARE'); ?></span>
 									<ul class="social-sharer">
 										<li>
-											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook." class="link--anchor"><span class="fa fa-facebook"></span></a>
+											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" target="_blank" title="Share on Facebook." class="link--anchor"><span class="fa fa-facebook"></span></a>
 										</li>
 										<li>
-											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="link--anchor"><span class="fa fa-twitter"></span></a>
+											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" target="_blank" class="link--anchor"><span class="fa fa-twitter"></span></a>
 										</li>
 										<li>
-											<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="link--anchor"><span class="fa fa-google-plus"></span></a>
+											<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="link--anchor" target="_blank"><span class="fa fa-google-plus"></span></a>
 										</li>
 									</ul>
 								</div>
@@ -128,19 +128,6 @@ get_header(); ?>
 							?>		
 							</ul>							
 
-						<!--<div class="header-style-2">Related news</div>
-						<div class="divide20"></div>
-						<ul class="style-1">
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Put the pieces together and overcome the differences in company values</a></li>
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Systemic Constellation in practice</a></li>
-							<li>
-								<i class="fa fa-caret-right"></i>
-								<a href="#">Impression from the last promotional workshop with ConsulToSee</a></li>
-						</ul>-->
 					</div>
 				</div>
 			</div>

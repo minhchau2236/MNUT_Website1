@@ -20,9 +20,9 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				'type' => 'DATE' 
 			)		
 		),
-		'orderby' => array( 
-			'eventStartDate' => 'DESC'
-		),
+		'meta_key'			=> 'eventStartDate',
+	    'orderby'			=> 'meta_value',
+	    'order'				=> 'DESC'
     );
 	$my_query = new WP_Query( $args ); 
 ?>
@@ -31,15 +31,15 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			<div id="page-header">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="/">Home</a></li>						
-						<li class="active">Old events</li>
+						<li><a href="/"><?php pll_e('Home') ; ?></a></li>						
+						<li class="active"><?php echo pll_e('past events') ?></li>
 					</ul>
 				</div>
 			</div>
 			<!-- #page-header -->
 			
 			<div class="container">
-				<h1 class="text-header">Old events</h1>				
+				<h1 class="text-header"><?php echo pll_e('past events') ?></h1>				
 				<div class="row column-2">
 				 <?php if ( $my_query->have_posts() ) : ?>
                 <?php
@@ -83,7 +83,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				</div>
 				<?php wp_reset_postdata(); ?>
 				 <?php else:  ?>
-					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+					<p><?php pll_e( pll_e('Sorry, no new event found') ); ?>.</p>
 				<?php endif; ?>
 
 			</div>

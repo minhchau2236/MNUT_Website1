@@ -68,7 +68,7 @@
 							// Get the URL of this category
 							$category_link = get_category_link( $category_id );
 						?>
-						<h3><a href="<?php echo esc_url( $category_link ); ?>"><?php echo pll_e('our events'); ?></a></h3>								
+						<h3><a href="<?php pll_e('/en/category/events') ; ?>"><?php echo pll_e('our events'); ?></a></h3>								
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
@@ -174,7 +174,7 @@
 			<div class="width-common">
 				<div class="container inner">
 					<div class="section-title">
-						<h3><?php echo pll_e('recent news'); ?></h3>								
+						<h3><a href="<?php pll_e('/en/category/news') ; ?>"><?php echo pll_e('recent news'); ?></a></h3>								
 					</div>
 					<!-- /.section-title -->
 					<div class="divide20"></div>
@@ -220,7 +220,7 @@
 							// Get the URL of this category
 							$category_link = get_category_link( $category_id );
 						?>
-						<h3><a href="<?php echo esc_url( $category_link ); ?>"><?php echo pll_e('testimonials'); ?></a></h3>				
+						<h3><a href="<?php pll_e('/en/category/testimonials') ; ?>"><?php echo pll_e('testimonials'); ?></a></h3>				
 											
 					</div>
 					<div class="divide20"></div>
