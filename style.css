@@ -2704,3 +2704,8 @@ div.wpcf7-validation-errors{
 /* post ul */
 .article-body--main ul{list-style:initial;padding-left:40px;}
 .article-body--main h4{color:inherit;}
+
+/* share icon */
+.link--anchor:hover .fa-twitter{color:#20b8ff;}
+.link--anchor:hover .fa-google-plus{color:#dd493d;}
+
