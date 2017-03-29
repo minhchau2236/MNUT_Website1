@@ -107,16 +107,14 @@
                     </div>
                     <!--/.nav-collapse --> 
                     
-                    <!-- search-mobile -->
-                    <div class="row">
-                        <div class="col-xs-12 show-search-mobile">
-                            <div class="navbar-collapse collapse search-collapse">
-                                <div class="nav navbar-nav search-mobile">                                  
-                                    <?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>                                                         
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- search-mobile -->                    
+					<div class="show-search-mobile">
+						<div class="navbar-collapse collapse search-collapse">
+							<div class="search-mobile">                                  
+								<?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>                                                         
+							</div>
+						</div>
+					</div>                    
                   
                 </div>
                 <!--/.container --> 

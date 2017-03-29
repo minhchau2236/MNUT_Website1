@@ -1205,12 +1205,12 @@ footer .mdi {
 }
 
 .owl-carousel .owl-nav .owl-prev {
-    left: -30px;
+    left: 0px;
 }
 
 .owl-carousel .owl-nav .owl-next {
     left: auto;
-    right: -30px;
+    right: 0px;
 }
 
 .owl-nav .owl-prev:before {
@@ -2709,3 +2709,10 @@ div.wpcf7-validation-errors{
 .link--anchor:hover .fa-twitter{color:#20b8ff;}
 .link--anchor:hover .fa-google-plus{color:#dd493d;}
 
+/* footer share facebook */
+.fb_iframe_widget{width:100%;}
+.fb_iframe_widget span{width:100%; max-width:100%;}
+.fb_iframe_widget iframe{
+	width: 100%!important;
+    max-width: 100%;
+}
