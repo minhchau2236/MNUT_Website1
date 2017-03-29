@@ -2,6 +2,7 @@
     /* Main Footer Template*/
 ?>
 </div>
+<!-- end .content-wrapper -->
 <footer class="footer width-common">
             <div class="container inner">
                 <div class="row">
