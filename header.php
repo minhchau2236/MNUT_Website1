@@ -89,7 +89,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <?php
-                        if (has_nav_menu('primary')) {
+                        /*if (has_nav_menu('primary')) {
                                 wp_nav_menu(array(
                                     'theme_location' => 'primary',
                                     'container' => false,
@@ -98,8 +98,14 @@
                                     'walker' => new ConsultToSee_Walker_Nav_Menu()
                                         )
                                 );
-                        }
+                        }*/
                         ?>
+						<?php if (has_nav_menu('primary')){
+								consultToSeeNew_menu('primary'); 
+							}
+						?>
+						
+						
                         <!-- /.navbar-nav -->
                         <div id="search">
                         <?php include (TEMPLATEPATH . '/searchform.php'); ?>

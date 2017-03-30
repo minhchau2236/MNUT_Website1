@@ -1,6 +1,7 @@
 <?php
 /** Walker_Nav_Menu class */
 require_once 'consultToSee-walker-nav-menu.php';
+require_once('wp_bootstrap_navwaker.php');
 
 if(!function_exists('consultToSee_setup')) {
     function consultToSee_setup()
@@ -22,7 +23,7 @@ function register_consultToSee_menus()
 	) );
 }
 //add_action('init', 'register_consultToSee_menus');
-
+	
 
 /*---Add stylesheets---*/
 function consultToSee_scripts(){   
@@ -371,4 +372,24 @@ function km_get_the_excerpt( $post_id = null, $num_words = 55 ) {
 
 	/** Language string setting*/
     require_once 'languageTranslate.php';
+	
+	/**
+	@ Thiết lập hàm hiển thị menu
+	@ consultToSeeNew_menu( $slug )
+	**/
+	if(!function_exists('consultToSeeNew_menu')){
+		function consultToSeeNew_menu($slug){
+			
+			$menu_new = array(
+				'menu' => 'primary', 
+				'theme_location' => $slug,
+				'menu_class' => 'nav navbar-nav', 
+				'depth'=> 3, 
+				'container'=> false, 				
+				'walker'=> new Bootstrap_Walker_Nav_Menu
+			);
+			wp_nav_menu($menu_new);
+			
+		}		
+	}	
 ?>
