@@ -2,25 +2,13 @@
     /*Front page template file*/   
     get_header();
 ?>
-<?php
-$categories = get_the_category();
-$category_slug = $categories[0]->slug ;
-$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-  $args = array(
-      'post_type' => 'post',
-      'posts_per_page' => 8,
-      'paged' => $paged,
-	  'category_name'   => $category_slug
-    );
-	$my_query = new WP_Query( $args ); 
-?>
 <!-- start content-wrapper -->
 		<div class="content-wrapper width-common"> 
 			<div id="page-header">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="/">Home</a></li>						
+						<li><a href="/"><?php pll_e('Home') ; ?></a></li>						
 						<li class="active"><?php single_term_title() ?></li>
 					</ul>
 				</div>
@@ -28,7 +16,29 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			<!-- #page-header -->
 			
 			<div class="container">
-				<h1 class="text-header"><?php single_term_title() ?></h1>				
+				<h1 class="text-header"><?php single_term_title() ?></h1>	
+				<?php
+					$categories = get_the_category();
+					if(sizeof($categories)<=0)
+					{
+				?>
+						<p><?php pll_e( 'Sorry, no posts matched your criteria' ); ?>.</p>
+				<?php		
+					}
+					else
+					{
+						$category_slug = $categories[0]->slug ;
+						$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+						$args = array(
+							'post_type' => 'post',
+							'posts_per_page' => 8,
+							'paged' => $paged,
+							'category_name'   => $category_slug
+							);
+							$my_query = new WP_Query( $args ); 
+				?>
+						
 				<div class="row column-2">
 				 <?php if ( $my_query->have_posts() ) : ?>
                 <?php
@@ -65,7 +75,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				<?php wp_reset_postdata(); ?>
 				 <?php else:  ?>
 					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-				<?php endif; ?>
+				<?php endif; }?>
 
 			</div>
 		</div>
