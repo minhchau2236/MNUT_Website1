@@ -1894,7 +1894,7 @@ footer .mdi {
     }
     .navbar .nav>li.current>a,
     .navbar .nav>li>a:hover {
-        color: #28a9b4 !important;
+        color: #48f1ff!important;
     }
     .navbar-nav>li>a,
     .navbar .dropdown-menu li a,
@@ -1904,7 +1904,7 @@ footer .mdi {
     }
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-        color: #28a9b4!important;
+        color: #48f1ff!important;
     }
     .navbar-nav .open .dropdown-menu>li>a {
         line-height: 1
@@ -2716,3 +2716,8 @@ div.wpcf7-validation-errors{
 	width: 100%!important;
     max-width: 100%;
 }
+
+/* widget polylang */
+.widget_polylang{float:right;}
+.widget_polylang .screen-reader-text{display:none;}
+
