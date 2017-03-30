@@ -48,7 +48,7 @@ get_header(); ?>
 				</div>
 				
 				<div class="row article-body">
-				<div class="col-md-8">
+				    <div class="col-md-12">
 						<div style="display:none;">
 							<figure>
 								<?php echo the_post_thumbnail( array(750, 400) ) ?>						 
@@ -56,7 +56,7 @@ get_header(); ?>
 							<div class="divide30"></div>				
 						</div>
 						<div class="row ">
-							<div class="col-sm-2 col-md-2 ">
+							<div class="col-sm-2 col-md-1 ">
 								<div class="sticky">
 									<span><?php echo pll_e('SHARE'); ?></span>
 									<ul class="social-sharer">
@@ -75,14 +75,14 @@ get_header(); ?>
 								<div class="divide10"></div>
 							</div>
 
-							<div class="col-sm-10 col-md-10 article-body--main">
+							<div class="col-sm-10 col-md-11 article-body--main">
 					 			<?php  the_content();  ?>
 								<div class="divide50"></div>
 							</div>
 						</div>
 			        </div>
 					<!-- /column left -->
-					<div class="col-md-4">
+					<div class="col-md-4" style="display: none">
 						
 						<div class="header-style-2"><?php echo pll_e('Related news'); ?></div>
 						<div class="divide20"></div>
@@ -138,6 +138,7 @@ get_header(); ?>
 							</ul>							
 					</div>
 				</div>
+				<!-- Article body -->
 			</div>
 			<?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

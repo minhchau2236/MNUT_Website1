@@ -23,6 +23,8 @@ function setCustomPolylangString() {
 	pll_register_string( 'no-events', 'More Events Coming Soon!', 'event', false );
 	pll_register_string( 'Check_all_of_Our_Event_here', 'Check all of Our Event here!', 'event', false );	
 	
+	pll_register_string( 'Sorry-no-posts-matched-your-criteria', 'Sorry, no posts matched your criteria', 'category', false );
+	
 	
 	pll_register_string( 'our_events', '/en/category/events', 'URL slugs ', false );// our events
 	pll_register_string( 'news', '/en/category/news', 'URL slugs ', false );// news
