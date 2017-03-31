@@ -1280,7 +1280,8 @@ footer .mdi {
     height: 50px;
     top: -10px;
     left: 0;
-    content: "“";
+    content:"";
+	background: #fff url('resources/images/quote.png') no-repeat center;
     font-style: normal;
 }
 
@@ -2689,7 +2690,8 @@ div.wpcf7-validation-errors{
     height: 50px;
     top: -10px;    
     left: 0;
-    content:"“";
+    content:"";
+	background: #fff url('resources/images/quote.png') no-repeat center;
 	font-style: normal;
 }
 .blog-article.style-3 blockquote:before {
