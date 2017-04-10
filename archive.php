@@ -20,7 +20,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			<div id="page-header">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="/">Home</a></li>						
+						<li><a href="/"><?php echo pll_e('Home'); ?></a></li>						
 						<li class="active"><?php single_term_title() ?></li>
 					</ul>
 				</div>

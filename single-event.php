@@ -9,7 +9,7 @@ get_header(); ?>
 			<div id="page-header">
 				<div class="container">
 					<ul class="breadcrumb">
-						<li><a href="/">Home</a></li>
+						<li><a href="/"><?php echo pll_e('Home'); ?></a></li>
 						<?php 
 								$post_categories = get_the_category();
 
@@ -48,7 +48,7 @@ get_header(); ?>
 				</div>
 				
 				<div class="row article-body">
-				<div class="col-md-8">
+				    <div class="col-md-12">
 						<div style="display:none;">
 							<figure>
 								<?php echo the_post_thumbnail( array(750, 400) ) ?>						 
@@ -56,18 +56,18 @@ get_header(); ?>
 							<div class="divide30"></div>				
 						</div>
 						<div class="row ">
-							<div class="col-sm-2 col-md-2 ">
+							<div class="col-sm-2 col-md-1 ">
 								<div class="sticky">
-									<span>SHARE</span>
+									<span><?php echo pll_e('SHARE'); ?></span>
 									<ul class="social-sharer">
 										<li>
-											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook." class="link--anchor"><span class="fa fa-facebook"></span></a>
+											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook." target="_blank"  class="link--anchor"><span class="fa fa-facebook"></span></a>
 										</li>
 										<li>
-											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="link--anchor"><span class="fa fa-twitter"></span></a>
+											<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" target="_blank" class="link--anchor"><span class="fa fa-twitter"></span></a>
 										</li>
 										<li>
-											<a href="#" class="link--anchor"><span class="fa fa-pinterest-p"></span></a>
+											<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="link--anchor" target="_blank"><span class="fa fa-google-plus"></span></a>
 										</li>
 									</ul>
 								</div>
@@ -75,16 +75,16 @@ get_header(); ?>
 								<div class="divide10"></div>
 							</div>
 
-							<div class="col-sm-10 col-md-10 article-body--main">
+							<div class="col-sm-10 col-md-11 article-body--main">
 					 			<?php  the_content();  ?>
 								<div class="divide50"></div>
 							</div>
 						</div>
 			        </div>
 					<!-- /column left -->
-					<div class="col-md-4">
+					<div class="col-md-4" style="display: none">
 						
-						<div class="header-style-2">Related news</div>
+						<div class="header-style-2"><?php echo pll_e('Related news'); ?></div>
 						<div class="divide20"></div>
 						<ul class="style-1">
 						<?php
@@ -138,6 +138,7 @@ get_header(); ?>
 							</ul>							
 					</div>
 				</div>
+				<!-- Article body -->
 			</div>
 			<?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

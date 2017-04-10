@@ -22,14 +22,34 @@
     <script src="<?php bloginfo('template_url') ?>/vendors/js/jquery.min.js"></script>  
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(isset($class) ? $class : ''); ?> > 
+  <body <?php body_class(isset($class) ? $class : ''); ?> >
+    <div id="fb-root"></div>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '402890653415256',
+            xfbml      : true,
+            version    : 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="wrapper">   
         <div class="topbar width-common">
             <div class="container">
               <div class="row">             
                 <div class="col-md-12 pull-right">
                     <?php							
-                        if(is_active_sidebar('language') && is_home()){
+                        if(is_active_sidebar('language')){
                             dynamic_sidebar('language');			
                         }
                     ?>	
@@ -69,7 +89,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <?php
-                        if (has_nav_menu('primary')) {
+                        /*if (has_nav_menu('primary')) {
                                 wp_nav_menu(array(
                                     'theme_location' => 'primary',
                                     'container' => false,
@@ -78,8 +98,14 @@
                                     'walker' => new ConsultToSee_Walker_Nav_Menu()
                                         )
                                 );
-                        }
+                        }*/
                         ?>
+						<?php if (has_nav_menu('primary')){
+								consultToSeeNew_menu('primary'); 
+							}
+						?>
+						
+						
                         <!-- /.navbar-nav -->
                         <div id="search">
                         <?php include (TEMPLATEPATH . '/searchform.php'); ?>
@@ -87,16 +113,14 @@
                     </div>
                     <!--/.nav-collapse --> 
                     
-                    <!-- search-mobile -->
-                    <div class="row">
-                        <div class="col-xs-12 show-search-mobile">
-                            <div class="navbar-collapse collapse search-collapse">
-                                <div class="nav navbar-nav search-mobile">                                  
-                                    <?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>                                                         
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- search-mobile -->                    
+					<div class="show-search-mobile">
+						<div class="navbar-collapse collapse search-collapse">
+							<div class="search-mobile">                                  
+								<?php include (TEMPLATEPATH . '/searchform-mobile.php'); ?>                                                         
+							</div>
+						</div>
+					</div>                    
                   
                 </div>
                 <!--/.container --> 

@@ -910,9 +910,21 @@ ul.top-social li a :hover {
 
 /* 	... TESTIMONIALS
 /*-----------------------------------------------------------------------------------*/
-
-.quote {
-    margin-bottom: 30px;
+.author{		
+	float:left;
+	margin-left:30px;	
+}
+.author .icon{
+	width: 114px;
+	height: 114px;
+}
+.author .icon img{max-width:100%;height:auto;}
+.author.circle{
+	border-radius:50%;
+}
+.quote{	
+	margin-left:130px;
+	margin-bottom:30px;
 }
 
 blockquote {
@@ -1205,12 +1217,12 @@ footer .mdi {
 }
 
 .owl-carousel .owl-nav .owl-prev {
-    left: -30px;
+    left: 0px;
 }
 
 .owl-carousel .owl-nav .owl-next {
     left: auto;
-    right: -30px;
+    right: 0px;
 }
 
 .owl-nav .owl-prev:before {
@@ -1259,7 +1271,7 @@ footer .mdi {
 }
 
 .testimonials.col1 blockquote {
-    padding-left: 50px;
+    padding-left: 30px;
     padding-right: 30px;
     position: relative;
     color: #606060;
@@ -1272,25 +1284,6 @@ footer .mdi {
 .testimonials.col1 .info {
     padding-left: 55px;
 }
-
-.testimonials.col1 blockquote:before {
-    font-family: Arial;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: -10px;
-    left: 0;
-    content: "“";
-    font-style: normal;
-}
-
-.testimonials.col1 blockquote:before {
-    color: #20bac6;
-    font-size: 90px;
-    line-height: 90px;
-}
-
-
 /*-----------------------------------------------------------------------------------*/
 
 
@@ -1884,17 +1877,17 @@ footer .mdi {
         vertical-align: middle;
     }
     .navbar .dropdown-menu {
-        padding-left: 20px
+        padding-left: 20px;
     }
     .navbar .navbar-nav>li {
-        margin: 0 30px
+        margin: 0 30px;
     }
     .navbar .navbar-nav>li>a {
         color: #fff !important;
     }
     .navbar .nav>li.current>a,
     .navbar .nav>li>a:hover {
-        color: #28a9b4 !important;
+        color: #48f1ff!important;
     }
     .navbar-nav>li>a,
     .navbar .dropdown-menu li a,
@@ -1904,7 +1897,7 @@ footer .mdi {
     }
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-        color: #28a9b4!important;
+        color: #48f1ff!important;
     }
     .navbar-nav .open .dropdown-menu>li>a {
         line-height: 1
@@ -2667,7 +2660,7 @@ div.wpcf7-validation-errors{
 
 /* topic testimonials */
 .blog-article.style-3 blockquote {
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 30px;
     position: relative;
     color: #606060;
@@ -2682,25 +2675,39 @@ div.wpcf7-validation-errors{
 .testimonials.col1 blockquote a{color:inherit;}
 .blog-article.style-3 blockquote a:hover p,.testimonials.col1 blockquote a:hover p{color:#35c0cc;}
 .blog-article.style-3 blockquote p{font-size:20px;line-height:30px;color: #606060;}
-.blog-article.style-3 blockquote:before {	
-	font-family: Arial;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: -10px;    
-    left: 0;
-    content:"“";
-	font-style: normal;
-}
-.blog-article.style-3 blockquote:before {
-   color: #20bac6;
-    font-size:90px;
-	line-height: 90px;
-}
+
 .blog-article.style-3 .info {
-    padding-left: 50px;
+    padding-left: 20px;
 	color: #343434;
 }
 /* post ul */
 .article-body--main ul{list-style:initial;padding-left:40px;}
 .article-body--main h4{color:inherit;}
+
+/* share icon */
+.link--anchor:hover .fa-twitter{color:#20b8ff;}
+.link--anchor:hover .fa-google-plus{color:#dd493d;}
+
+/* footer share facebook */
+.fb_iframe_widget{width:100%;}
+.fb_iframe_widget span{width:100%; max-width:100%;}
+.fb_iframe_widget iframe{
+	width: 100%!important;
+    max-width: 100%;
+}
+
+/* widget polylang */
+.widget_polylang{float:right;}
+.widget_polylang .screen-reader-text{display:none;}
+
+.blog-article.style-3 .author{margin-left:0;}
+.blog-article.style-3 .quote{margin-left:120px;}
+@media(max-width:768px){
+	.testimonials .author{width:100%;margin: 0 0 20px 0;}
+	.testimonials .author .icon{margin:0 auto;}
+	.testimonials .quote{width:100%; float:left; margin-left:0;}
+	
+	.blog-article.style-3 .author{width:100%;margin: 0 0 20px 0;}
+	.blog-article.style-3 .author .icon{margin:0 auto;}
+	.blog-article.style-3 .quote{width:100%; float:left; margin-left:0;}
+}
