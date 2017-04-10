@@ -48,7 +48,19 @@
 						<div class="blog-article style-3">							
 							<div class="blog-article-details">
 								<div class="author">
-									<div class="icon"> <img src="<?php bloginfo('template_url') ?>/resources/images/testimonial_img_default.jpg" alt="" /> </div>									
+									<div class="icon"> 
+									<?php
+										if ( has_post_thumbnail() ) {
+											echo the_post_thumbnail( array(114, 114) );
+										}
+										else
+										{
+									?>								
+											<img src="<?php bloginfo('template_url') ?>/resources/images/testimonial_img_default.jpg" alt="" />;
+									<?php
+										}								  
+									?>									
+								</div>									
 								</div>
 								<div class="quote">
 									<blockquote>										 
