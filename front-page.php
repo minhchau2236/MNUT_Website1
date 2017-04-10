@@ -237,7 +237,10 @@
 					$testimonials_postCount = 1;
 					while ( $the_testimonials_query->have_posts() ) : $the_testimonials_query->the_post();
 					?>	
-					<div class="item">								
+					<div class="item">
+						<div class="author">
+							<div class="icon"> <img src="<?php bloginfo('template_url') ?>/resources/images/testimonial_img_default.jpg" alt="" /> </div>									
+						</div>
 						<div class="quote">
 							<blockquote>
 								<a href="<?php echo the_permalink();?>"><?php echo the_excerpt(); ?></a>

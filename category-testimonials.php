@@ -46,7 +46,10 @@
                 ?>
 				<div class="col-sm-6">
 						<div class="blog-article style-3">							
-							<div class="blog-article-details">							
+							<div class="blog-article-details">
+								<div class="author">
+									<div class="icon"> <img src="<?php bloginfo('template_url') ?>/resources/images/testimonial_img_default.jpg" alt="" /> </div>									
+								</div>
 								<div class="quote">
 									<blockquote>										 
 										<a href="<?php  echo the_permalink(); ?>"><?php echo wp_strip_all_tags(the_excerpt(), true ); ?></a>										
