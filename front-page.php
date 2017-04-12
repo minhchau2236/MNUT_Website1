@@ -247,7 +247,7 @@
 									else
 									{
 								?>								
-										<img src="<?php bloginfo('template_url') ?>/resources/images/testimonial_img_default.jpg" alt="" />;
+										<img src="<?php bloginfo('template_url') ?>/resources/images/testimonial_img_default.jpg" alt="" />
 								<?php
 									}								  
 								?>															   

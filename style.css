@@ -917,11 +917,10 @@ ul.top-social li a :hover {
 .author .icon{
 	width: 114px;
 	height: 114px;
+	border-radius:50%;
+	overflow:hidden;
 }
 .author .icon img{max-width:100%;height:auto;}
-.author.circle{
-	border-radius:50%;
-}
 .quote{	
 	margin-left:130px;
 	margin-bottom:30px;
